@@ -1,0 +1,22 @@
+TITLE: DoD Releases Defense Industrial Base Cybersecurity Strategy
+SOURCE_ORG: U.S. Department of Defense
+URL: https://www.defense.gov/News/Releases/Release/Article/3723439/dod-releases-defense-industrial-base-cybersecurity-strategy/
+TOPIC_CATEGORY: Defense industrial base / critical infrastructure security
+SUGGESTED_FILENAME: doc_016_dib_cybersecurity_strategy_dod.txt
+
+SUMMARY:
+This DoD release describes the Defense Industrial Base Cybersecurity Strategy for fiscal years 2024–2027. It identifies cybersecurity as essential for preserving defense capabilities in a contested environment. The strategy’s goals include strengthening DoD governance, improving contractor cybersecurity posture, preserving critical DIB resilience, and improving collaboration with industry. The source is useful because it connects cyber risk to defense supply-chain continuity and technology advantage. It can be paired with broader critical-infrastructure and supply-chain sources. It also supports human-review flags for vendor compromise, contractor risk, and operationally sensitive defense information.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for showing that defense supply-chain risk includes cyber risk across contractors, not only physical production capacity.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source frames the defense industrial base as a cyber-contested ecosystem. The key idea is that defense production and technology advantage depend on contractors, subcontractors, research organizations, and digital systems. If those networks are compromised, adversaries may steal intellectual property, disrupt production, manipulate data, or gain insight into military capabilities. Cybersecurity is therefore a supply-chain resilience issue, not only an IT compliance issue.
+
+The strategy announcement identifies four broad goals: stronger DoD governance for DIB cybersecurity, improved cybersecurity posture among contractors, preservation of critical defense industrial capabilities in a cyber-contested environment, and improved collaboration with industry. A RAG assistant should extract these as mitigation categories. When asked about defense supply-chain risk, the assistant should mention cyber posture and contractor collaboration alongside materials, workforce, and production capacity.
+
+This source is useful for human-review flags because defense-industrial cyber incidents may involve sensitive details. A generated answer should avoid exposing exploit paths, contractor vulnerabilities, or operational details that could be misused. It should provide strategic-level summaries and recommend official reporting or incident-response channels where appropriate.
+
+For contradiction testing, pair this source with GAO foreign-supplier dependency and RAND production-capacity analysis. A defense supply-chain problem may be cyber, physical, financial, workforce-related, geopolitical, or all of these at once. The assistant should avoid reducing DIB resilience to only one dimension. The source also overlaps with critical-infrastructure guidance: many DIB contractors depend on power, telecommunications, cloud services, and transportation, so an infrastructure disruption can become a defense production disruption.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.

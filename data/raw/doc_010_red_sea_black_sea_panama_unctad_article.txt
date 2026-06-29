@@ -1,0 +1,22 @@
+TITLE: Red Sea, Black Sea and Panama Canal: UNCTAD Raises Alarm on Global Trade Disruptions
+SOURCE_ORG: UNCTAD
+URL: https://unctad.org/news/red-sea-black-sea-and-panama-canal-unctad-raises-alarm-global-trade-disruptions
+TOPIC_CATEGORY: Red Sea shipping disruptions
+SUGGESTED_FILENAME: doc_010_red_sea_black_sea_panama_unctad_article.txt
+
+SUMMARY:
+This UNCTAD article provides a concise public explainer on Red Sea, Black Sea, and Panama Canal disruptions. It notes that maritime transport carries the majority of global goods trade and that the Suez Canal handled a significant share of global trade in 2023. It describes how Houthi attacks, Ukraine-war effects, and Panama drought combined to pressure trade routes. The article mentions falling Suez volumes, reduced container transits, rising freight costs, and route suspensions by major shipping firms. It is useful as a shorter, more accessible companion to the UNCTAD report. It can also provide overlapping evidence for the same claims, useful for source attribution testing.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful as a short explainer source for easier retrieval and as a duplicate/overlap test against the longer UNCTAD PDF.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source is a compact explainer that reinforces the longer UNCTAD report. It should be used for quick retrieval of the main Red Sea disruption narrative: attacks on ships in the Red Sea added pressure to global trade routes already affected by the war in Ukraine and climate-related constraints at the Panama Canal. The source emphasizes that maritime transport is central to global trade, so disruption at major chokepoints can affect supply chains far from the conflict zone.
+
+The article is valuable for a demo corpus because it provides overlapping claims in a different format. The RAG system may retrieve both this article and the longer report for a query about Red Sea disruption. It should recognize that they come from the same organization and should not count them as fully independent confirmation. This is useful for source-attribution testing: two citations from UNCTAD are helpful but do not represent two unrelated views.
+
+The source explains the operational mechanism of disruption. Shipping companies may suspend or reduce Suez transits when vessel security risk rises. Container ships may reroute, tanker and gas carrier traffic may decline, and freight rates may rise as capacity tightens. Longer routes also increase fuel use and transit times. This provides useful evidence for generated summaries about supply-chain delays, cost inflation, emissions, and schedule uncertainty.
+
+For contradiction and uncertainty testing, the assistant should date the claims. A figure about Suez trade volume falling over two months in early 2024 should not be used as a current metric unless a newer source confirms the continuation. The system should also distinguish between attacks causing risk and the business decisions that transmit that risk into trade disruption. Human review should be triggered when the answer claims a direct shortage of a specific commodity without retrieving commodity-specific evidence.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.

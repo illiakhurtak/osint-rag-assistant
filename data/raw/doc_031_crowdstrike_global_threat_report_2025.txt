@@ -1,0 +1,18 @@
+TITLE: CrowdStrike Global Threat Report 2025 and Adversary Tradecraft Trends
+SOURCE_ORG: CrowdStrike
+URL: https://www.crowdstrike.com/en-us/global-threat-report/
+TOPIC_CATEGORY: Cybersecurity / adversary tradecraft / threat intelligence
+SUGGESTED_FILENAME: doc_031_crowdstrike_global_threat_report_2025.txt
+
+SUMMARY:
+CrowdStrike Global Threat Report 2025 discusses adversary behavior across cybercrime, targeted intrusion, cloud compromise, identity abuse, and nation-state operations. It is relevant for RAG because it provides terminology for intrusion speed, hands-on-keyboard activity, initial access brokers, ransomware ecosystems, and adversary naming. It should be paired with government advisories because vendor naming conventions and telemetry differ across sources. The source is useful for testing entity resolution across threat actors, sectors, and techniques.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Good source for adversary-centric retrieval and cross-source threat-actor normalization.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be treated as an adversary-tradecraft report. It is useful when the assistant needs to explain how attackers move from initial access to privilege escalation, lateral movement, data theft, extortion, or cloud abuse. A RAG system can extract actor names, sectors, techniques, and observed behavioral trends.
+The assistant should be careful with naming. Vendors use different actor labels for overlapping clusters, and actor identity can be uncertain. The output should state whether attribution comes from a vendor assessment, a government advisory, or multiple independent sources.
+For contradiction testing, pair CrowdStrike with Microsoft, CISA, ENISA, and Mandiant-style reporting. Human review should trigger when the query asks for attribution certainty, incident response advice, or claims about a named victim.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

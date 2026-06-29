@@ -1,0 +1,18 @@
+TITLE: Infrastructure Resilience Planning Framework for Local and Regional Risk
+SOURCE_ORG: CISA
+URL: https://www.cisa.gov/resources-tools/resources/infrastructure-resilience-planning-framework-irpf
+TOPIC_CATEGORY: Critical infrastructure / resilience planning / local risk
+SUGGESTED_FILENAME: doc_058_cisa_infrastructure_resilience_planning_framework.txt
+
+SUMMARY:
+CISA Infrastructure Resilience Planning Framework helps communities and organizations understand dependencies, prioritize infrastructure, assess risks, and plan resilience improvements. It is relevant because many OSINT sources describe threats but not community-level consequence analysis. The source helps the assistant connect assets, hazards, dependencies, owners, operators, lifeline services, and recovery priorities. It pairs well with energy, water, cyber, and disaster-response sources.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for turning threat evidence into dependency and consequence analysis for infrastructure resilience.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when the query asks what disruption would mean for a place or community. A RAG assistant should map assets, dependencies, lifeline functions, owners, operators, hazards, and recovery priorities.
+The framework is useful for distinguishing criticality from visibility. A small substation, bridge, water pump, hospital supplier, or communications node may be more consequential than a more visible asset if many services depend on it.
+For contradiction testing, pair this source with cyber and energy reports. Human review should trigger for emergency planning, public safety, or asset-specific vulnerability discussion.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

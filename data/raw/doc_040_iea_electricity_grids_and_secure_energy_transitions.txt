@@ -1,0 +1,18 @@
+TITLE: Electricity Grids and Secure Energy Transitions as Critical Infrastructure Risk
+SOURCE_ORG: International Energy Agency
+URL: https://www.iea.org/reports/electricity-grids-and-secure-energy-transitions
+TOPIC_CATEGORY: Energy security / electricity grids / critical infrastructure
+SUGGESTED_FILENAME: doc_040_iea_electricity_grids_and_secure_energy_transitions.txt
+
+SUMMARY:
+IEA Electricity Grids and Secure Energy Transitions analyzes grid investment, reliability, permitting, modernization, and the role of electricity networks in clean energy deployment. It is relevant because Ukraine energy resilience, critical infrastructure protection, and industrial electrification all depend on grid capacity and reliability. The source helps the RAG assistant connect physical infrastructure, cyber risk, weather risk, equipment supply chains, and long lead times. It is useful as a non-conflict baseline for electricity infrastructure risk.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for explaining why grid resilience is a long-term capacity issue, not only an attack-repair problem.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when energy security questions involve electricity networks rather than fuel supply alone. A RAG assistant should distinguish generation capacity from transmission, distribution, interconnection, grid controls, transformers, and storage. Weakness in any part of the system can constrain reliability.
+The report helps connect infrastructure and supply chains. Grid expansion requires permitting, investment, specialized equipment, skilled labor, digital controls, and long planning cycles. Cybersecurity and physical security matter, but so do routine bottlenecks such as transformer availability and connection delays.
+For contradiction testing, pair this source with Ukraine energy reports. A wartime document may emphasize damage and repair; this IEA source explains structural grid constraints that exist even outside war.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

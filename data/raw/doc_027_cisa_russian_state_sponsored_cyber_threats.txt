@@ -1,0 +1,18 @@
+TITLE: Russian State-Sponsored and Criminal Cyber Threats to Critical Infrastructure
+SOURCE_ORG: CISA and partner agencies
+URL: https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-110a
+TOPIC_CATEGORY: Cybersecurity / Russia / critical infrastructure
+SUGGESTED_FILENAME: doc_027_cisa_russian_state_sponsored_cyber_threats.txt
+
+SUMMARY:
+This advisory provides guidance on Russian state-sponsored and criminal cyber threats, especially in the context of elevated geopolitical tension and the war against Ukraine. It is relevant to a RAG demo because it connects strategic conflict with cyber risk to critical infrastructure. The source helps distinguish state activity, criminal ransomware, hacktivist claims, and defensive preparedness measures. It also supports human-review flags when users ask about public safety, attribution, or active incidents.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful bridge between Russia-Ukraine conflict monitoring and critical-infrastructure cyber preparedness.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a user asks how geopolitical conflict can increase cyber risk outside the battlefield. The advisory emphasizes that critical infrastructure operators should maintain heightened awareness, improve logging, patch known exploited vulnerabilities, and review incident response plans.
+A RAG assistant should be careful with attribution. Russian state-sponsored activity, criminal ransomware, and politically motivated public claims may overlap in time but are not identical. The assistant should identify the evidence basis for attribution and avoid turning broad warnings into claims about a specific incident.
+For contradiction testing, pair this source with CISA Shields Up material, sector guidance, and Ukraine conflict reports. Human review should trigger whenever the answer concerns an active incident, defensive action for a live network, or allegations against a named organization.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

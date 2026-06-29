@@ -1,0 +1,18 @@
+TITLE: GAO Oversight of DoD Foreign Supplier and Country-of-Origin Risk
+SOURCE_ORG: U.S. Government Accountability Office
+URL: https://www.gao.gov/products/gao-24-106996
+TOPIC_CATEGORY: Defense supply chains / foreign dependency / oversight
+SUGGESTED_FILENAME: doc_046_gao_dod_supply_chain_foreign_dependency.txt
+
+SUMMARY:
+GAO reporting on DoD foreign supplier risk identifies gaps in supply-chain visibility, country-of-origin data, and integration of risk information. This source is relevant because it provides oversight rather than strategy language. It helps a RAG assistant explain why defense supply-chain risk may remain hidden until a disruption, sanction, or geopolitical crisis occurs. It should be paired with DoD strategy documents because implementation gaps can contradict optimistic policy framing.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for identifying uncertainty caused by incomplete supplier visibility in defense procurement.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a user asks what DoD knows or does not know about supplier dependency. A RAG assistant should treat missing data as a risk factor, not as absence of risk. Country-of-origin, sub-tier suppliers, sole-source components, and foreign ownership can be difficult to track.
+The report supports an evidence hierarchy. Official strategy may describe intended resilience, while oversight reports identify whether processes, data systems, and accountability mechanisms exist. Both are necessary for a balanced answer.
+For contradiction testing, pair GAO with DoD NDIS and CISA ICT supply-chain guidance. Human review should trigger for procurement, sanctions, export controls, or specific supplier allegations.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

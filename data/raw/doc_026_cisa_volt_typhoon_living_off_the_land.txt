@@ -1,0 +1,18 @@
+TITLE: Volt Typhoon Living-off-the-Land Activity Against Critical Infrastructure
+SOURCE_ORG: CISA, NSA, FBI and international partners
+URL: https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-038a
+TOPIC_CATEGORY: Cybersecurity / state-sponsored threat / critical infrastructure
+SUGGESTED_FILENAME: doc_026_cisa_volt_typhoon_living_off_the_land.txt
+
+SUMMARY:
+This joint advisory describes Volt Typhoon activity that used living-off-the-land techniques to target critical infrastructure networks. It is highly relevant for RAG because the threat is not only malware-based; it includes stealthy use of legitimate tools, weak credentials, network devices, and administrative pathways. The source helps the assistant explain why detection is difficult and why asset visibility, logging, identity security, and network segmentation matter. It should be paired with mitigation frameworks and vendor evidence for balanced answers.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Strong threat-intelligence source for critical-infrastructure intrusion, persistence, and detection uncertainty.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This advisory is useful for explaining adversary tradecraft that blends into normal administration. A RAG assistant should not over-focus on file hashes or malware names when the source describes legitimate tools, compromised credentials, and network appliances. The correct retrieval frame is persistence and pre-positioning inside critical infrastructure, not only malware infection.
+The source supports detection and uncertainty reasoning. Living-off-the-land activity may leave subtle traces in logs, authentication records, remote management sessions, and unusual administrator behavior. Lack of malware artifacts is not evidence that a network is safe. At the same time, public reporting does not prove a specific operator has been compromised unless the source says so.
+For contradiction testing, pair this advisory with NIST CSF and CISA CPGs. Threat evidence should lead to defensive categories such as identity hardening, segmentation, logging, secure remote access, and incident planning. Human review is required for live remediation or attribution claims.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

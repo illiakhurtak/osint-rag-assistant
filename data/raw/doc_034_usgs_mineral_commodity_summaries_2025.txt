@@ -1,0 +1,18 @@
+TITLE: USGS Mineral Commodity Summaries 2025 for Country-of-Origin and Production Data
+SOURCE_ORG: U.S. Geological Survey
+URL: https://www.usgs.gov/centers/national-minerals-information-center/mineral-commodity-summaries
+TOPIC_CATEGORY: Critical minerals / production data / country concentration
+SUGGESTED_FILENAME: doc_034_usgs_mineral_commodity_summaries_2025.txt
+
+SUMMARY:
+USGS Mineral Commodity Summaries provide annual statistics and country-level context for minerals used in industry, energy, electronics, and defense. The source is relevant to RAG because it gives structured mineral names, production figures, reserves, import reliance, and country concentration patterns. It can support retrieval for rare earth elements, gallium, germanium, lithium, cobalt, graphite, and other inputs. It should be paired with IEA and DOE sources when users ask about supply-chain risk rather than raw production alone.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Strong source for mineral entity extraction, country mapping, and import-dependency reasoning.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be treated as a reference dataset for mineral facts. A RAG assistant can use it to extract commodity names, producing countries, reserve estimates, import reliance, uses, and recycling notes. It is especially useful when a user asks for concrete mineral examples rather than broad supply-chain language.
+The assistant should not equate reserves with available supply. Production, processing capacity, trade restrictions, environmental permitting, refining technology, and transportation can all change risk. Mineral availability also differs by grade and application.
+For contradiction testing, pair USGS with IEA critical minerals outlooks and policy sources. USGS is strong for commodity facts; IEA is strong for energy-transition demand and market dynamics. Human review should trigger for procurement, sanctions, or investment conclusions.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

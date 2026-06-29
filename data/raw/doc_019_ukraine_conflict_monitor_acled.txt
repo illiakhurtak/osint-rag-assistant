@@ -1,0 +1,22 @@
+TITLE: Ukraine Conflict Monitor
+SOURCE_ORG: ACLED
+URL: https://acleddata.com/monitor/ukraine-conflict-monitor
+TOPIC_CATEGORY: Ukraine war situational risk reports / OSINT
+SUGGESTED_FILENAME: doc_019_ukraine_conflict_monitor_acled.txt
+
+SUMMARY:
+ACLED’s Ukraine Conflict Monitor provides near-real-time information on the war, including an interactive map, curated data, and weekly situation updates. It tracks political violence events, violence targeting civilians, fatalities, and regional developments. The source is useful for RAG because it provides structured conflict-event evidence rather than only narrative analysis. It can be used to test retrieval of dates, metrics, and trend direction. It also supports uncertainty flags because near-real-time conflict data can be revised and may have reporting delays. It pairs well with ISW, OCHA, IEA, and RAND sources for military, humanitarian, energy, and industrial perspectives.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful structured OSINT-like source for event data, trend extraction, and confidence caveats around reporting delays and source methodology.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used as a near-real-time conflict monitoring input. ACLED tracks political violence events, incidents of violence targeting civilians, fatalities, and regional developments in Ukraine. For a RAG system, this is valuable because it gives structured data and weekly updates rather than only interpretive commentary. A good assistant can retrieve event counts, compare week-to-week changes, identify affected regions, and separate violence against civilians from battles or other event types.
+
+The source is useful for situational summaries because it can provide a factual backbone. If a user asks what changed in Ukraine this week, the assistant can cite ACLED for event trends and then combine it with ISW for military interpretation, OCHA for humanitarian effects, and IEA for energy infrastructure impacts. This multi-source combination is exactly the kind of grounded synthesis a situational-awareness assistant should perform.
+
+However, ACLED also requires confidence caveats. Conflict-event data may be revised as more information becomes available. Reporting delays can affect recent periods. Access constraints, propaganda, local information environments, and source availability can influence coverage. The assistant should therefore avoid treating the most recent count as final. It should say “reported” or “recorded” events and identify the reporting period.
+
+This source is excellent for human-review flags around civilian harm. If retrieved evidence indicates increased violence targeting civilians, attacks on hospitals, energy systems, evacuation routes, or densely populated areas, the generated summary should be reviewed before use in operational settings. The source also helps test contradiction detection: one source may say battlefield lines are stable while ACLED shows high violence event counts. These are not contradictory; territorial movement and event intensity are different measures.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.

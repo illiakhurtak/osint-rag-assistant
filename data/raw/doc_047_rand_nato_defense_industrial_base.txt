@@ -1,0 +1,18 @@
+TITLE: RAND Analysis of NATO Defense Industrial Base Constraints
+SOURCE_ORG: RAND Corporation
+URL: https://www.rand.org/pubs/research_reports/RRA3215-1.html
+TOPIC_CATEGORY: Defense industrial base / NATO / production bottlenecks
+SUGGESTED_FILENAME: doc_047_rand_nato_defense_industrial_base.txt
+
+SUMMARY:
+RAND analysis of NATO defense industrial capacity examines production bottlenecks, demand signals, munitions stockpiles, defense spending, procurement coordination, and allied industrial constraints. It is useful for RAG because it provides analytical detail that complements NATO policy statements. The source helps explain why increasing production is difficult even when political demand is high. It supports questions about surge capacity, munitions, workforce, supply chains, and long-term contracts.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful non-government analysis for testing official defense production claims against capacity constraints.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used to analyze bottlenecks rather than only policy commitments. A RAG assistant should identify whether a production problem comes from funding, contracts, supplier capacity, raw materials, machine tools, workforce, certification, or demand uncertainty.
+The report is useful for explaining time horizons. Defense production cannot always scale like consumer manufacturing because products are specialized, regulated, capital-intensive, and tied to long qualification cycles. Stockpile replenishment and Ukraine support can create competing demand.
+For contradiction testing, pair RAND with NATO action plans and DoD strategy. Human review should trigger for military logistics, procurement choices, or readiness claims.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

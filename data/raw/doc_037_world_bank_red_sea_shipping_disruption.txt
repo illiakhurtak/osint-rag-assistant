@@ -1,0 +1,18 @@
+TITLE: Red Sea Shipping Disruption and Economic Transmission Channels
+SOURCE_ORG: World Bank
+URL: https://blogs.worldbank.org/en/opendata/impact-red-sea-shipping-disruptions-global-trade
+TOPIC_CATEGORY: Maritime trade / economic risk / Red Sea
+SUGGESTED_FILENAME: doc_037_world_bank_red_sea_shipping_disruption.txt
+
+SUMMARY:
+World Bank analysis of Red Sea shipping disruption explains how attacks and rerouting can affect trade time, shipping costs, supply chains, and prices. It is relevant because the RAG assistant should connect route-level events to economic consequences without overstating direct causality. The source helps identify transmission channels such as longer voyages, higher fuel consumption, insurance costs, container availability, and delays. It pairs well with UNCTAD sources and maritime-security advisories.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for explaining how a chokepoint shock becomes a macroeconomic or sectoral risk.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a user asks why Red Sea incidents matter beyond the immediate security event. The key analytical move is to translate route disruption into time, cost, reliability, inventory, and price effects. A RAG assistant should not assume that every sector is equally affected; exposure depends on trade lane, cargo type, inventory buffers, and shipping contracts.
+The document is useful for uncertainty language. Some impacts are measurable quickly, such as route changes and spot freight rates. Others, such as consumer price effects or supply-chain substitution, require more time and depend on firm behavior.
+For contradiction testing, pair this source with UNCTAD reports and company-level shipping announcements. Human review should trigger when the answer concerns active routing decisions, sanctions, insurance, or security advice.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

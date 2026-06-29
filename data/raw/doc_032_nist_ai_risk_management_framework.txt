@@ -1,0 +1,18 @@
+TITLE: NIST AI Risk Management Framework for Trustworthy AI Analysis
+SOURCE_ORG: NIST
+URL: https://www.nist.gov/itl/ai-risk-management-framework
+TOPIC_CATEGORY: AI governance / model risk / trustworthy AI
+SUGGESTED_FILENAME: doc_032_nist_ai_risk_management_framework.txt
+
+SUMMARY:
+NIST AI Risk Management Framework provides a voluntary structure for mapping, measuring, managing, and governing AI risks. It is useful for an OSINT RAG assistant because RAG systems can produce hallucinations, misattribute claims, expose sensitive information, amplify misinformation, or overstate confidence. The framework helps classify AI risks by validity, reliability, safety, security, privacy, explainability, fairness, and accountability. It also supports evaluation design for human review and confidence labeling.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for evaluating the RAG assistant itself, especially uncertainty, citations, and safety flags.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used as a governance reference for AI system behavior. A RAG assistant has risks that differ from ordinary search: it can combine sources incorrectly, cite irrelevant passages, hide uncertainty, or produce polished but unsupported claims. The framework helps express those risks in a structured way.
+For OSINT use, important concepts include provenance, measurement, monitoring, human oversight, privacy, robustness, and explainability. The assistant should state when evidence is incomplete and should avoid creating certainty from weak retrieval. It should also preserve distinctions between allegation, analysis, official confirmation, and observed data.
+For contradiction testing, pair this source with OECD disinformation guidance and local evaluation results. Human review should trigger when retrieved evidence involves public safety, conflict, elections, sanctions, named individuals, or operational security.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

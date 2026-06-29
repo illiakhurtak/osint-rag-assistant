@@ -1,0 +1,22 @@
+TITLE: Good Practice Principles for Public Communication Responses to Mis- and Disinformation
+SOURCE_ORG: OECD
+URL: https://www.oecd.org/content/dam/oecd/en/publications/reports/2023/04/good-practice-principles-for-public-communication-responses-to-mis-and-disinformation_e047ea9c/6d141b44-en.pdf
+TOPIC_CATEGORY: Information operations / disinformation / OSINT
+SUGGESTED_FILENAME: doc_020_disinformation_public_communication_oecd.txt
+
+SUMMARY:
+This OECD report provides principles for public communication responses to mis- and disinformation. It emphasizes trustworthy content, transparency, public-interest communication, institutionalized response functions, and cooperation with media, civil society, private platforms, and citizens. It is useful because it gives a governance and response framework rather than focusing only on adversary tactics. The report helps a RAG assistant distinguish misinformation, disinformation, and malinformation, and identify appropriate mitigation responses. It can be paired with CISA and Microsoft/FPRI threat sources to balance defensive communication with threat analysis. It is also useful for confidence, unknowns, and human-review flags when information is unverified.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for safe OSINT summarization: evidence grading, trust-building communication, and avoiding amplification of unverified or harmful narratives.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source provides a governance framework for responding to mis- and disinformation. Its key value for a RAG assistant is that it focuses on how institutions should communicate, not only on how adversaries manipulate information. The report emphasizes trustworthy public communication, transparency, public-interest orientation, institutional capacity, media literacy, and cooperation across government, media, civil society, platforms, and citizens.
+
+A RAG system should use this source to improve its own output style. When evidence is uncertain, the assistant should say so. When a claim is unverified, it should avoid presenting it as fact. When multiple narratives exist, it should distinguish verified evidence from allegation, speculation, or adversary amplification. The assistant should avoid repeating misleading claims unnecessarily and should provide context that reduces confusion.
+
+The report is useful for defining response principles. In an OSINT workflow, the assistant should identify source provenance, publication date, author or institution, evidence type, and possible incentives. It should explain what would increase confidence, such as official confirmation, independent corroboration, primary documents, satellite imagery, telemetry, or consistent reporting from credible local sources. It should also identify when a topic requires human review, especially when public safety, elections, critical infrastructure, conflict casualties, or identity-based harm is involved.
+
+For contradiction testing, pair this source with threat-focused documents on foreign influence operations. A threat report may identify adversary tactics, while the OECD report explains how public institutions should respond without damaging trust. The assistant should not confuse counter-disinformation with censorship or political messaging. It should emphasize accuracy, transparency, and public-interest communication. A human-review flag should trigger if the model is asked to generate persuasive content around a contested or unverified geopolitical narrative.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.

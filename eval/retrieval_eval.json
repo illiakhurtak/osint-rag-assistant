@@ -1,0 +1,1702 @@
+[
+  {
+    "id": "q_001",
+    "query": "Why is semiconductor supply-chain risk distributed across design, fabrication, equipment, materials, and packaging rather than located in one company?",
+    "expected_doc_ids": ["doc_001"],
+    "also_relevant_doc_ids": ["doc_002", "doc_003", "doc_050"],
+    "topic": "semiconductor_supply_chain",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_001 is the baseline explainer for semiconductor supply-chain stages and distributed specialization."
+  },
+  {
+    "id": "q_002",
+    "query": "Which document should explain why policy makers need supply-chain maps before designing chip controls or resilience programs?",
+    "expected_doc_ids": ["doc_001"],
+    "also_relevant_doc_ids": ["doc_002", "doc_003"],
+    "topic": "semiconductor_supply_chain",
+    "difficulty": "medium",
+    "tests": "evidence_selection",
+    "rationale": "doc_001 explicitly links supply-chain mapping to policy design and risk assessment."
+  },
+  {
+    "id": "q_003",
+    "query": "Where should the system retrieve evidence about the Indo-Pacific region's role in semiconductor supply-chain chokepoints?",
+    "expected_doc_ids": ["doc_002"],
+    "also_relevant_doc_ids": ["doc_005", "doc_006", "doc_001"],
+    "topic": "semiconductor_geography",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_002 is the direct CSIS source on Indo-Pacific semiconductor mapping."
+  },
+  {
+    "id": "q_004",
+    "query": "Which sources help explain why advanced chips depend on specialized international production rather than national self-sufficiency?",
+    "expected_doc_ids": ["doc_001", "doc_002", "doc_003"],
+    "also_relevant_doc_ids": ["doc_050"],
+    "topic": "semiconductor_supply_chain",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "docs 001-003 cover supply-chain stages, Indo-Pacific geography, and global resilience constraints."
+  },
+  {
+    "id": "q_005",
+    "query": "Why can new semiconductor investments improve resilience without removing all chokepoints?",
+    "expected_doc_ids": ["doc_003", "doc_050"],
+    "also_relevant_doc_ids": ["doc_051"],
+    "topic": "semiconductor_resilience",
+    "difficulty": "hard",
+    "tests": "temporal_comparison",
+    "rationale": "doc_003 provides an earlier resilience frame and doc_050 updates it with emerging resilience and continuing dependencies."
+  },
+  {
+    "id": "q_006",
+    "query": "Why do critical minerals matter for semiconductor supply-chain resilience?",
+    "expected_doc_ids": ["doc_004"],
+    "also_relevant_doc_ids": ["doc_033", "doc_034", "doc_035"],
+    "topic": "critical_minerals",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_004 directly covers mineral demands for resilient semiconductor supply chains."
+  },
+  {
+    "id": "q_007",
+    "query": "Which documents should be retrieved to connect chip manufacturing risk with critical mineral concentration and country-of-origin data?",
+    "expected_doc_ids": ["doc_004", "doc_034"],
+    "also_relevant_doc_ids": ["doc_033", "doc_035"],
+    "topic": "critical_minerals",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_004 covers semiconductor mineral demand and doc_034 covers country-of-origin and production data."
+  },
+  {
+    "id": "q_008",
+    "query": "Would TSMC's overseas fabs eliminate near-term dependence on Taiwan?",
+    "expected_doc_ids": ["doc_005"],
+    "also_relevant_doc_ids": ["doc_006", "doc_002", "doc_050"],
+    "topic": "taiwan_semiconductor_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_005 discusses Taiwan concentration, TSMC overseas expansion, and why new fabs are not immediate substitutes."
+  },
+  {
+    "id": "q_009",
+    "query": "Which source should answer whether Taiwan chip risk affects medical equipment, telecom, cloud, automotive electronics, and defense-adjacent infrastructure?",
+    "expected_doc_ids": ["doc_005"],
+    "also_relevant_doc_ids": ["doc_001", "doc_002"],
+    "topic": "taiwan_semiconductor_risk",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_005 connects Taiwan semiconductor dependence to multiple downstream U.S. sectors."
+  },
+  {
+    "id": "q_010",
+    "query": "Why might firms, investors, insurers, and supply-chain managers react before a Taiwan crisis causes physical damage?",
+    "expected_doc_ids": ["doc_006"],
+    "also_relevant_doc_ids": ["doc_005"],
+    "topic": "taiwan_crisis_scenarios",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_006 focuses on scenario exercises and anticipatory behavior under Taiwan Strait uncertainty."
+  },
+  {
+    "id": "q_011",
+    "query": "What sources distinguish long-term diversification from immediate Taiwan crisis vulnerability?",
+    "expected_doc_ids": ["doc_005", "doc_006"],
+    "also_relevant_doc_ids": ["doc_050"],
+    "topic": "taiwan_semiconductor_risk",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_005 covers diversification limits and doc_006 covers crisis behavior and scenario uncertainty."
+  },
+  {
+    "id": "q_012",
+    "query": "Why should a RAG answer avoid saying U.S. chip controls simply stopped China or completely failed?",
+    "expected_doc_ids": ["doc_007"],
+    "also_relevant_doc_ids": ["doc_008", "doc_049", "doc_052"],
+    "topic": "export_controls",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_007 frames export controls as iterative, technical, and dependent on enforcement, adaptation, and metrics."
+  },
+  {
+    "id": "q_013",
+    "query": "Which document explains that export controls evolve through repeated updates, loopholes, workarounds, and policy churn?",
+    "expected_doc_ids": ["doc_007"],
+    "also_relevant_doc_ids": ["doc_049"],
+    "topic": "export_controls",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_007 is the CSIS commentary on U.S. chip export controls from 2022 to 2024."
+  },
+  {
+    "id": "q_014",
+    "query": "Why do semiconductor export controls require allied cooperation?",
+    "expected_doc_ids": ["doc_008"],
+    "also_relevant_doc_ids": ["doc_007", "doc_049", "doc_052"],
+    "topic": "export_controls",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_008 directly explains allied chokepoints and legal-authority differences."
+  },
+  {
+    "id": "q_015",
+    "query": "Which sources should be retrieved when a user asks for current semiconductor export-control compliance context rather than broad strategy?",
+    "expected_doc_ids": ["doc_049"],
+    "also_relevant_doc_ids": ["doc_007", "doc_008", "doc_052"],
+    "topic": "export_control_compliance",
+    "difficulty": "hard",
+    "tests": "human_review_trigger",
+    "rationale": "doc_049 is the official BIS-oriented source in the corpus; strategic explainers alone are insufficient for compliance questions."
+  },
+  {
+    "id": "q_016",
+    "query": "What document connects AI chips and compute infrastructure to export-control leverage?",
+    "expected_doc_ids": ["doc_052"],
+    "also_relevant_doc_ids": ["doc_007", "doc_049"],
+    "topic": "ai_chips_export_controls",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_052 is specifically about AI chips, compute infrastructure, and export-control leverage."
+  },
+  {
+    "id": "q_017",
+    "query": "Which source should explain how CHIPS for America differs from export controls as a semiconductor policy tool?",
+    "expected_doc_ids": ["doc_051"],
+    "also_relevant_doc_ids": ["doc_007", "doc_049", "doc_050"],
+    "topic": "semiconductor_industrial_policy",
+    "difficulty": "medium",
+    "tests": "cross_topic",
+    "rationale": "doc_051 covers industrial-policy goals such as manufacturing, R&D, workforce, and secure supply."
+  },
+  {
+    "id": "q_018",
+    "query": "Which documents help compare older semiconductor concentration analysis with newer resilience claims?",
+    "expected_doc_ids": ["doc_050"],
+    "also_relevant_doc_ids": ["doc_001", "doc_003", "doc_051"],
+    "topic": "semiconductor_resilience",
+    "difficulty": "hard",
+    "tests": "temporal_comparison",
+    "rationale": "doc_050 explicitly updates older semiconductor concentration and resilience analysis."
+  },
+  {
+    "id": "q_019",
+    "query": "What evidence should support the claim that announced chip investments are not the same as operating capacity?",
+    "expected_doc_ids": ["doc_051"],
+    "also_relevant_doc_ids": ["doc_050", "doc_005"],
+    "topic": "semiconductor_industrial_policy",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_051 distinguishes awards, construction, production ramp, workforce, and resilient supply."
+  },
+  {
+    "id": "q_020",
+    "query": "Which sources connect semiconductor supply-chain resilience, industrial policy, and export-control strategy into one answer?",
+    "expected_doc_ids": ["doc_050", "doc_051", "doc_007"],
+    "also_relevant_doc_ids": ["doc_008", "doc_049"],
+    "topic": "semiconductor_policy_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_050 covers resilience, doc_051 covers industrial policy, and doc_007 covers export-control strategy."
+  },
+  {
+    "id": "q_021",
+    "query": "What are the global trade impacts of Red Sea shipping disruptions?",
+    "expected_doc_ids": ["doc_009"],
+    "also_relevant_doc_ids": ["doc_010", "doc_036", "doc_037", "doc_038", "doc_039"],
+    "topic": "maritime_supply_chain_risk",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_009 is the direct UNCTAD report on Red Sea, Black Sea, and Panama Canal disruption effects."
+  },
+  {
+    "id": "q_022",
+    "query": "Which document frames Red Sea disruption as part of simultaneous stress across Suez, Panama, and the Black Sea?",
+    "expected_doc_ids": ["doc_009"],
+    "also_relevant_doc_ids": ["doc_010", "doc_036"],
+    "topic": "maritime_supply_chain_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_009 focuses on overlapping chokepoint disruptions rather than Red Sea alone."
+  },
+  {
+    "id": "q_023",
+    "query": "Which source should answer a short query about UNCTAD raising alarm over Red Sea, Black Sea, and Panama Canal disruptions?",
+    "expected_doc_ids": ["doc_010"],
+    "also_relevant_doc_ids": ["doc_009"],
+    "topic": "maritime_supply_chain_risk",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_010 is the UNCTAD article with that title and framing."
+  },
+  {
+    "id": "q_024",
+    "query": "How do rerouting, longer voyages, fuel use, and freight rates transmit maritime disruption into economic risk?",
+    "expected_doc_ids": ["doc_037"],
+    "also_relevant_doc_ids": ["doc_009", "doc_036", "doc_039"],
+    "topic": "maritime_economic_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_037 is the World Bank source on Red Sea shipping disruption and economic transmission channels."
+  },
+  {
+    "id": "q_025",
+    "query": "Which source gives a broad shipping baseline covering port performance, freight markets, emissions, route disruptions, and resilience?",
+    "expected_doc_ids": ["doc_036"],
+    "also_relevant_doc_ids": ["doc_009", "doc_037"],
+    "topic": "maritime_trade",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_036 is UNCTAD's broad Review of Maritime Transport 2024 baseline."
+  },
+  {
+    "id": "q_026",
+    "query": "What source should be retrieved for commercial shipping security context in the Red Sea rather than macroeconomic transmission?",
+    "expected_doc_ids": ["doc_038"],
+    "also_relevant_doc_ids": ["doc_009", "doc_037"],
+    "topic": "maritime_security",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_038 is the IMO Red Sea maritime security context source."
+  },
+  {
+    "id": "q_027",
+    "query": "Which sources help distinguish transit counts, freight rates, trade volumes, consumer prices, and final economic effects?",
+    "expected_doc_ids": ["doc_009", "doc_037", "doc_039"],
+    "also_relevant_doc_ids": ["doc_036"],
+    "topic": "maritime_macroeconomic_risk",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_009 discusses maritime indicators, doc_037 transmission channels, and doc_039 macroeconomic supply-disruption risks."
+  },
+  {
+    "id": "q_028",
+    "query": "Which source should be retrieved when the question asks how supply disruptions can affect inflation, trade, and economic growth?",
+    "expected_doc_ids": ["doc_039"],
+    "also_relevant_doc_ids": ["doc_037", "doc_036"],
+    "topic": "macroeconomic_supply_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_039 covers World Bank global economic prospects and supply-disruption risk channels."
+  },
+  {
+    "id": "q_029",
+    "query": "What evidence should support a human-review warning for active maritime security, sanctions, insurance, or emergency logistics decisions?",
+    "expected_doc_ids": ["doc_036", "doc_038"],
+    "also_relevant_doc_ids": ["doc_009", "doc_037"],
+    "topic": "maritime_human_review",
+    "difficulty": "hard",
+    "tests": "human_review_trigger",
+    "rationale": "doc_036 and doc_038 explicitly connect maritime disruption and security context to high-stakes decisions."
+  },
+  {
+    "id": "q_030",
+    "query": "Which documents should be paired to compare a short UNCTAD alert with a broader maritime transport baseline?",
+    "expected_doc_ids": ["doc_010", "doc_036"],
+    "also_relevant_doc_ids": ["doc_009"],
+    "topic": "maritime_source_comparison",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_010 is a short alert and doc_036 is the broad UNCTAD maritime baseline."
+  },
+  {
+    "id": "q_031",
+    "query": "How can a decentralized electricity system improve Ukraine's energy resilience?",
+    "expected_doc_ids": ["doc_012"],
+    "also_relevant_doc_ids": ["doc_011", "doc_040", "doc_041"],
+    "topic": "ukraine_energy_resilience",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_012 directly covers decentralised electricity as a Ukraine resilience approach."
+  },
+  {
+    "id": "q_032",
+    "query": "Which source should be used for Ukraine's energy security and winter risk rather than general grid modernization?",
+    "expected_doc_ids": ["doc_011"],
+    "also_relevant_doc_ids": ["doc_012", "doc_040"],
+    "topic": "ukraine_energy_security",
+    "difficulty": "easy",
+    "tests": "intent_routing",
+    "rationale": "doc_011 focuses on Ukraine energy security and the coming winter."
+  },
+  {
+    "id": "q_033",
+    "query": "Why is electricity grid reliability not just a question of generation capacity?",
+    "expected_doc_ids": ["doc_040"],
+    "also_relevant_doc_ids": ["doc_011", "doc_012", "doc_058"],
+    "topic": "electricity_grid_resilience",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_040 distinguishes generation from transmission, distribution, interconnection, controls, transformers, and storage."
+  },
+  {
+    "id": "q_034",
+    "query": "Which documents should be retrieved to separate wartime damage to Ukraine's energy system from structural grid constraints?",
+    "expected_doc_ids": ["doc_011", "doc_040"],
+    "also_relevant_doc_ids": ["doc_012", "doc_041"],
+    "topic": "ukraine_energy_resilience",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_011 covers Ukraine wartime energy risk and doc_040 covers structural grid constraints."
+  },
+  {
+    "id": "q_035",
+    "query": "What source should support claims about Ukraine reconstruction needs and infrastructure damage assessment?",
+    "expected_doc_ids": ["doc_041"],
+    "also_relevant_doc_ids": ["doc_011", "doc_042"],
+    "topic": "ukraine_reconstruction",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_041 is the Ukraine Rapid Damage and Needs Assessment source."
+  },
+  {
+    "id": "q_036",
+    "query": "Which source should be retrieved for humanitarian needs, civilian impact, and response planning in Ukraine?",
+    "expected_doc_ids": ["doc_042"],
+    "also_relevant_doc_ids": ["doc_041", "doc_019"],
+    "topic": "ukraine_humanitarian",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_042 is OCHA's Ukraine humanitarian needs and response plan source."
+  },
+  {
+    "id": "q_037",
+    "query": "Why should recent Ukraine conflict event counts be treated as reported data rather than final ground truth?",
+    "expected_doc_ids": ["doc_019"],
+    "also_relevant_doc_ids": ["doc_043", "doc_042"],
+    "topic": "ukraine_osint_monitoring",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_019 explains ACLED reporting delays, revisions, and coverage limitations."
+  },
+  {
+    "id": "q_038",
+    "query": "Which source is best for daily conflict analysis of Russian offensive campaigns rather than event-count datasets?",
+    "expected_doc_ids": ["doc_043"],
+    "also_relevant_doc_ids": ["doc_019"],
+    "topic": "ukraine_conflict_analysis",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_043 is the ISW daily conflict analysis source, while doc_019 is ACLED event monitoring."
+  },
+  {
+    "id": "q_039",
+    "query": "Which documents would support a situational summary combining event trends, military interpretation, humanitarian effects, and energy infrastructure impacts?",
+    "expected_doc_ids": ["doc_019", "doc_043", "doc_042", "doc_011"],
+    "also_relevant_doc_ids": ["doc_041", "doc_012"],
+    "topic": "ukraine_situational_awareness",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "ACLED, ISW, OCHA, and IEA sources cover complementary evidence layers."
+  },
+  {
+    "id": "q_040",
+    "query": "Which source should be retrieved when the query asks about infrastructure damage and recovery needs rather than military front-line movement?",
+    "expected_doc_ids": ["doc_041"],
+    "also_relevant_doc_ids": ["doc_043", "doc_042"],
+    "topic": "ukraine_reconstruction",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_041 covers damage and needs assessment; doc_043 is military analysis."
+  },
+  {
+    "id": "q_041",
+    "query": "What source explains NIST Cybersecurity Framework 2.0 as a baseline for critical-infrastructure risk management?",
+    "expected_doc_ids": ["doc_021"],
+    "also_relevant_doc_ids": ["doc_022", "doc_057", "doc_060"],
+    "topic": "cybersecurity_risk_management",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_021 directly covers NIST CSF 2.0 as a risk-management baseline."
+  },
+  {
+    "id": "q_042",
+    "query": "Which source should answer what baseline cyber controls critical-infrastructure operators should implement?",
+    "expected_doc_ids": ["doc_022"],
+    "also_relevant_doc_ids": ["doc_021", "doc_059"],
+    "topic": "cybersecurity_controls",
+    "difficulty": "easy",
+    "tests": "intent_routing",
+    "rationale": "doc_022 is CISA's cross-sector cybersecurity performance goals source."
+  },
+  {
+    "id": "q_043",
+    "query": "What does the Known Exploited Vulnerabilities Catalog show about active exploitation risk?",
+    "expected_doc_ids": ["doc_023"],
+    "also_relevant_doc_ids": ["doc_021", "doc_022"],
+    "topic": "vulnerability_intelligence",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_023 is specifically about KEV as evidence of active exploitation."
+  },
+  {
+    "id": "q_044",
+    "query": "How does secure-by-design guidance shift responsibility from only customers to technology producers?",
+    "expected_doc_ids": ["doc_024"],
+    "also_relevant_doc_ids": ["doc_021", "doc_022", "doc_025"],
+    "topic": "secure_by_design",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_024 directly covers Secure by Design and the shift toward producer responsibility."
+  },
+  {
+    "id": "q_045",
+    "query": "Which document should be retrieved for ICT supply-chain risk management and technology dependency analysis?",
+    "expected_doc_ids": ["doc_025"],
+    "also_relevant_doc_ids": ["doc_046", "doc_057"],
+    "topic": "ict_supply_chain_risk",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_025 is the CISA ICT supply-chain risk management source."
+  },
+  {
+    "id": "q_046",
+    "query": "How does Volt Typhoon use living-off-the-land techniques against critical infrastructure?",
+    "expected_doc_ids": ["doc_026"],
+    "also_relevant_doc_ids": ["doc_021", "doc_022", "doc_059"],
+    "topic": "cyber_threat_intelligence",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_026 is the direct advisory on Volt Typhoon living-off-the-land activity."
+  },
+  {
+    "id": "q_047",
+    "query": "Which source explains Russian state-sponsored and criminal cyber threats to critical infrastructure?",
+    "expected_doc_ids": ["doc_027"],
+    "also_relevant_doc_ids": ["doc_059", "doc_021", "doc_022"],
+    "topic": "russian_cyber_threats",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_027 is the direct source on Russian cyber threats to critical infrastructure."
+  },
+  {
+    "id": "q_048",
+    "query": "Which source is best for European cyber threat landscape trends rather than U.S. critical infrastructure controls?",
+    "expected_doc_ids": ["doc_028"],
+    "also_relevant_doc_ids": ["doc_021", "doc_022"],
+    "topic": "european_cyber_risk",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_028 is ENISA's European threat landscape source."
+  },
+  {
+    "id": "q_049",
+    "query": "Which document uses platform-scale telemetry to discuss digital defense and threat trends?",
+    "expected_doc_ids": ["doc_029"],
+    "also_relevant_doc_ids": ["doc_030", "doc_031"],
+    "topic": "cyber_threat_telemetry",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_029 is Microsoft's Digital Defense Report source."
+  },
+  {
+    "id": "q_050",
+    "query": "Which source should be retrieved for cloud-centric threat intelligence rather than broad endpoint tradecraft?",
+    "expected_doc_ids": ["doc_030"],
+    "also_relevant_doc_ids": ["doc_029", "doc_031"],
+    "topic": "cloud_security",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_030 is the Google Cloud Threat Horizons source."
+  },
+  {
+    "id": "q_051",
+    "query": "Which source should explain adversary tradecraft trends such as intrusion behavior and threat-actor tactics?",
+    "expected_doc_ids": ["doc_031"],
+    "also_relevant_doc_ids": ["doc_026", "doc_029", "doc_030"],
+    "topic": "adversary_tradecraft",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_031 is the CrowdStrike Global Threat Report source."
+  },
+  {
+    "id": "q_052",
+    "query": "How should a RAG assistant connect a state-sponsored critical-infrastructure cyber threat to defensive controls?",
+    "expected_doc_ids": ["doc_026", "doc_022"],
+    "also_relevant_doc_ids": ["doc_021", "doc_027", "doc_059"],
+    "topic": "cyber_defense_mapping",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_026 provides threat tradecraft and doc_022 provides baseline defensive control mapping."
+  },
+  {
+    "id": "q_053",
+    "query": "Which sources should be retrieved for heightened cyber posture during geopolitical risk?",
+    "expected_doc_ids": ["doc_059"],
+    "also_relevant_doc_ids": ["doc_027", "doc_022", "doc_021"],
+    "topic": "cyber_preparedness",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_059 is the Shields Up guidance source."
+  },
+  {
+    "id": "q_054",
+    "query": "Which sources help distinguish governance frameworks, baseline controls, threat advisories, and preparedness guidance in cyber defense?",
+    "expected_doc_ids": ["doc_021", "doc_022", "doc_026", "doc_059"],
+    "also_relevant_doc_ids": ["doc_027"],
+    "topic": "cyber_defense_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "These sources cover separate layers: framework, controls, threat evidence, and heightened posture guidance."
+  },
+  {
+    "id": "q_055",
+    "query": "What source should be retrieved for NIST AI Risk Management Framework and trustworthy AI analysis?",
+    "expected_doc_ids": ["doc_032"],
+    "also_relevant_doc_ids": [],
+    "topic": "ai_governance",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_032 is the NIST AI RMF source."
+  },
+  {
+    "id": "q_056",
+    "query": "Which source should be used when the query asks about model risk, trustworthy AI, and AI governance rather than cybersecurity controls?",
+    "expected_doc_ids": ["doc_032"],
+    "also_relevant_doc_ids": ["doc_021"],
+    "topic": "ai_governance",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_032 covers AI governance, while doc_021 covers cybersecurity risk management."
+  },
+  {
+    "id": "q_057",
+    "query": "Which source explains global critical minerals outlook and energy-technology supply risk?",
+    "expected_doc_ids": ["doc_033"],
+    "also_relevant_doc_ids": ["doc_034", "doc_035"],
+    "topic": "critical_minerals",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_033 is the IEA Global Critical Minerals Outlook source."
+  },
+  {
+    "id": "q_058",
+    "query": "Which source should be retrieved for mineral commodity summaries, production data, and country concentration?",
+    "expected_doc_ids": ["doc_034"],
+    "also_relevant_doc_ids": ["doc_033", "doc_035"],
+    "topic": "critical_minerals",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_034 is the USGS Mineral Commodity Summaries source."
+  },
+  {
+    "id": "q_059",
+    "query": "Which source is about DOE critical materials assessment for energy supply chains?",
+    "expected_doc_ids": ["doc_035"],
+    "also_relevant_doc_ids": ["doc_033", "doc_034"],
+    "topic": "critical_materials",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_035 is the DOE Critical Materials Assessment source."
+  },
+  {
+    "id": "q_060",
+    "query": "Which documents should be retrieved to compare critical minerals risk across energy technologies, production concentration, and semiconductor demand?",
+    "expected_doc_ids": ["doc_033", "doc_034", "doc_004"],
+    "also_relevant_doc_ids": ["doc_035"],
+    "topic": "critical_minerals_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_033 covers energy-technology minerals, doc_034 country data, and doc_004 semiconductor mineral demand."
+  },
+  {
+    "id": "q_061",
+    "query": "Which source should answer what the first National Defense Industrial Strategy is trying to improve?",
+    "expected_doc_ids": ["doc_015"],
+    "also_relevant_doc_ids": ["doc_045", "doc_044"],
+    "topic": "defense_industrial_base",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_015 is the DoD first-ever National Defense Industrial Strategy source."
+  },
+  {
+    "id": "q_062",
+    "query": "Which source covers implementation planning for the National Defense Industrial Strategy?",
+    "expected_doc_ids": ["doc_045"],
+    "also_relevant_doc_ids": ["doc_015"],
+    "topic": "defense_industrial_base",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_045 is the NDIS implementation plan source."
+  },
+  {
+    "id": "q_063",
+    "query": "Which source should be retrieved for DoD defense industrial base cybersecurity strategy?",
+    "expected_doc_ids": ["doc_016"],
+    "also_relevant_doc_ids": ["doc_022", "doc_025"],
+    "topic": "defense_cybersecurity",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_016 directly covers DoD's DIB cybersecurity strategy."
+  },
+  {
+    "id": "q_064",
+    "query": "Why can defense supplier dependencies remain hidden until disruption, sanctions, or geopolitical crisis?",
+    "expected_doc_ids": ["doc_046"],
+    "also_relevant_doc_ids": ["doc_017", "doc_025", "doc_045"],
+    "topic": "defense_supply_chain_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_046 covers GAO oversight findings on supplier visibility, country-of-origin data, and sub-tier risk."
+  },
+  {
+    "id": "q_065",
+    "query": "Which source should be retrieved for foreign supplier dependence in the defense industrial base?",
+    "expected_doc_ids": ["doc_017"],
+    "also_relevant_doc_ids": ["doc_046"],
+    "topic": "defense_supply_chain_risk",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_017 directly covers defense industrial base dependence on foreign suppliers."
+  },
+  {
+    "id": "q_066",
+    "query": "Which source should explain how Russia's war in Ukraine affects U.S. and allied defense industrial bases?",
+    "expected_doc_ids": ["doc_018"],
+    "also_relevant_doc_ids": ["doc_048", "doc_044", "doc_047"],
+    "topic": "defense_industrial_base",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_018 directly covers Russia-Ukraine war implications for U.S. and allied DIBs."
+  },
+  {
+    "id": "q_067",
+    "query": "Why does modern high-intensity war stress defense industrial bases beyond peacetime assumptions?",
+    "expected_doc_ids": ["doc_048"],
+    "also_relevant_doc_ids": ["doc_018", "doc_044", "doc_045", "doc_047"],
+    "topic": "defense_industrial_base",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_048 covers munitions, attrition, repair, procurement flexibility, and production assumptions."
+  },
+  {
+    "id": "q_068",
+    "query": "Which source covers NATO Defence Production Action Plan and allied industrial capacity?",
+    "expected_doc_ids": ["doc_044"],
+    "also_relevant_doc_ids": ["doc_047", "doc_045"],
+    "topic": "nato_defense_industry",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_044 is the NATO Defence Production Action Plan source."
+  },
+  {
+    "id": "q_069",
+    "query": "Which source should be retrieved for NATO defense industrial base bottlenecks rather than official action-plan language?",
+    "expected_doc_ids": ["doc_047"],
+    "also_relevant_doc_ids": ["doc_044"],
+    "topic": "nato_defense_industry",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_047 is RAND analysis of NATO DIB constraints and bottlenecks."
+  },
+  {
+    "id": "q_070",
+    "query": "Which documents should be paired to compare defense industrial policy ambition with implementation gaps and oversight concerns?",
+    "expected_doc_ids": ["doc_015", "doc_045", "doc_046"],
+    "also_relevant_doc_ids": ["doc_017"],
+    "topic": "defense_industrial_governance",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "DoD strategy and implementation sources can be compared with GAO oversight evidence."
+  },
+  {
+    "id": "q_071",
+    "query": "Which source is most relevant when procurement, sanctions, or specific supplier allegations require human review?",
+    "expected_doc_ids": ["doc_046"],
+    "also_relevant_doc_ids": ["doc_017", "doc_025"],
+    "topic": "defense_supply_chain_human_review",
+    "difficulty": "hard",
+    "tests": "human_review_trigger",
+    "rationale": "doc_046 explicitly frames missing supplier visibility and country-of-origin data as sensitive risk information."
+  },
+  {
+    "id": "q_072",
+    "query": "How should governments communicate during mis- and disinformation incidents?",
+    "expected_doc_ids": ["doc_020"],
+    "also_relevant_doc_ids": ["doc_055"],
+    "topic": "disinformation_public_communication",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_020 directly covers good practice principles for public communication responses."
+  },
+  {
+    "id": "q_073",
+    "query": "Which source should be retrieved for whole-of-society resilience to disinformation rather than only response messaging?",
+    "expected_doc_ids": ["doc_055"],
+    "also_relevant_doc_ids": ["doc_020", "doc_053"],
+    "topic": "disinformation_resilience",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_055 covers Facts Not Fakes and broader democratic resilience."
+  },
+  {
+    "id": "q_074",
+    "query": "Which source should answer questions about foreign information manipulation and interference from a European external-action perspective?",
+    "expected_doc_ids": ["doc_053"],
+    "also_relevant_doc_ids": ["doc_055", "doc_056"],
+    "topic": "fimi_disinformation",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_053 is the EEAS FIMI report source."
+  },
+  {
+    "id": "q_075",
+    "query": "Which source tracks Russian influence operations and cyber-enabled narratives in Microsoft threat analysis?",
+    "expected_doc_ids": ["doc_054"],
+    "also_relevant_doc_ids": ["doc_053", "doc_056"],
+    "topic": "russian_influence_operations",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_054 directly covers Russian influence operations in Microsoft Threat Analysis."
+  },
+  {
+    "id": "q_076",
+    "query": "Which source should be retrieved to check whether a disinformation narrative has appeared before?",
+    "expected_doc_ids": ["doc_056"],
+    "also_relevant_doc_ids": ["doc_053", "doc_055"],
+    "topic": "disinformation_narrative_tracking",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_056 covers the EUvsDisinfo database and recurrent narratives."
+  },
+  {
+    "id": "q_077",
+    "query": "How should an OSINT assistant distinguish recurring disinformation narratives from public communication responses?",
+    "expected_doc_ids": ["doc_056", "doc_020"],
+    "also_relevant_doc_ids": ["doc_053", "doc_054", "doc_055"],
+    "topic": "disinformation_osint",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_056 covers narrative tracking while doc_020 covers communication response principles."
+  },
+  {
+    "id": "q_078",
+    "query": "Which documents should be retrieved to explain FIMI, Russian cyber-enabled influence, and public resilience without restating false claims?",
+    "expected_doc_ids": ["doc_053", "doc_054", "doc_055"],
+    "also_relevant_doc_ids": ["doc_056", "doc_020"],
+    "topic": "disinformation_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "EEAS, Microsoft MTAC, and OECD sources cover complementary FIMI, Russian influence, and resilience perspectives."
+  },
+  {
+    "id": "q_079",
+    "query": "Which source should be used when a query asks how public institutions should respond without amplifying false narratives?",
+    "expected_doc_ids": ["doc_020"],
+    "also_relevant_doc_ids": ["doc_055", "doc_056"],
+    "topic": "disinformation_public_communication",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_020 is the public communication response source and is relevant to avoiding amplification."
+  },
+  {
+    "id": "q_080",
+    "query": "Which source should be retrieved for foreign influence operations targeting critical infrastructure specifically?",
+    "expected_doc_ids": ["doc_014"],
+    "also_relevant_doc_ids": ["doc_020", "doc_053", "doc_057"],
+    "topic": "critical_infrastructure_information_operations",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_014 directly covers foreign influence operations targeting critical infrastructure."
+  },
+  {
+    "id": "q_081",
+    "query": "Which document should be retrieved for strategic guidance and national priorities for U.S. critical infrastructure security and resilience?",
+    "expected_doc_ids": ["doc_013"],
+    "also_relevant_doc_ids": ["doc_057", "doc_060"],
+    "topic": "critical_infrastructure_policy",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_013 is the DHS strategic guidance and national priorities source."
+  },
+  {
+    "id": "q_082",
+    "query": "Which source explains sector risk management agencies and critical-infrastructure responsibilities?",
+    "expected_doc_ids": ["doc_057"],
+    "also_relevant_doc_ids": ["doc_013", "doc_060"],
+    "topic": "critical_infrastructure_governance",
+    "difficulty": "easy",
+    "tests": "keyword_match",
+    "rationale": "doc_057 covers sector risk-management agencies and responsibilities."
+  },
+  {
+    "id": "q_083",
+    "query": "Which source should answer what a local or regional infrastructure resilience planning process should map?",
+    "expected_doc_ids": ["doc_058"],
+    "also_relevant_doc_ids": ["doc_057", "doc_013"],
+    "topic": "critical_infrastructure_resilience",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_058 covers local dependency mapping, lifeline functions, assets, owners, hazards, and recovery priorities."
+  },
+  {
+    "id": "q_084",
+    "query": "Which source should be retrieved for national-level critical infrastructure security and resilience policy from the White House?",
+    "expected_doc_ids": ["doc_060"],
+    "also_relevant_doc_ids": ["doc_013", "doc_057"],
+    "topic": "critical_infrastructure_policy",
+    "difficulty": "easy",
+    "tests": "entity_specific",
+    "rationale": "doc_060 is the White House national security memorandum source."
+  },
+  {
+    "id": "q_085",
+    "query": "Which sources explain critical-infrastructure resilience as national policy, sector responsibility, and local dependency mapping?",
+    "expected_doc_ids": ["doc_060", "doc_057", "doc_058"],
+    "also_relevant_doc_ids": ["doc_013"],
+    "topic": "critical_infrastructure_governance",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_060, doc_057, and doc_058 cover national, sector, and local layers."
+  },
+  {
+    "id": "q_086",
+    "query": "Which source should be retrieved when a user asks what disruption would mean for a community rather than a national strategy document?",
+    "expected_doc_ids": ["doc_058"],
+    "also_relevant_doc_ids": ["doc_057", "doc_060"],
+    "topic": "critical_infrastructure_resilience",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_058 is local and regional resilience planning, unlike national policy sources."
+  },
+  {
+    "id": "q_087",
+    "query": "Which sources should be paired to connect cyber threats, information operations, and critical-infrastructure governance?",
+    "expected_doc_ids": ["doc_014", "doc_026", "doc_057"],
+    "also_relevant_doc_ids": ["doc_060", "doc_022"],
+    "topic": "critical_infrastructure_synthesis",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_014 covers influence operations, doc_026 threat tradecraft, and doc_057 governance responsibilities."
+  },
+  {
+    "id": "q_088",
+    "query": "Which sources should support a warning that asset-specific vulnerability or emergency planning answers require human review?",
+    "expected_doc_ids": ["doc_058", "doc_060"],
+    "also_relevant_doc_ids": ["doc_027", "doc_059"],
+    "topic": "critical_infrastructure_human_review",
+    "difficulty": "hard",
+    "tests": "human_review_trigger",
+    "rationale": "doc_058 and doc_060 involve local resilience and national critical infrastructure policy with public-safety implications."
+  },
+  {
+    "id": "q_089",
+    "query": "Which sources should answer whether infrastructure risk depends on both physical dependencies and cyber preparedness?",
+    "expected_doc_ids": ["doc_058", "doc_022"],
+    "also_relevant_doc_ids": ["doc_021", "doc_040", "doc_059"],
+    "topic": "critical_infrastructure_synthesis",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_058 covers physical/local dependencies and doc_022 covers cybersecurity baseline controls."
+  },
+  {
+    "id": "q_090",
+    "query": "Which sources should be retrieved for a question comparing electricity grid risk, local dependencies, and national resilience governance?",
+    "expected_doc_ids": ["doc_040", "doc_058", "doc_060"],
+    "also_relevant_doc_ids": ["doc_057"],
+    "topic": "infrastructure_resilience_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_040 covers grid systems, doc_058 local dependency mapping, and doc_060 national governance."
+  },
+  {
+    "id": "q_091",
+    "query": "Which sources should support an answer about how Ukraine war lessons affect defense production and reconstruction priorities?",
+    "expected_doc_ids": ["doc_048", "doc_041"],
+    "also_relevant_doc_ids": ["doc_018", "doc_044", "doc_045"],
+    "topic": "ukraine_defense_reconstruction",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_048 covers defense industrial lessons and doc_041 covers reconstruction and damage assessment."
+  },
+  {
+    "id": "q_092",
+    "query": "Which sources should be retrieved to connect Red Sea maritime disruption with broader macroeconomic supply-disruption risk?",
+    "expected_doc_ids": ["doc_037", "doc_039"],
+    "also_relevant_doc_ids": ["doc_009", "doc_036"],
+    "topic": "maritime_macroeconomic_risk",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_037 covers Red Sea economic transmission and doc_039 broader macroeconomic risk channels."
+  },
+  {
+    "id": "q_093",
+    "query": "Which sources help answer whether chip policy should rely more on domestic investment, allied coordination, or technology denial?",
+    "expected_doc_ids": ["doc_051", "doc_008", "doc_007"],
+    "also_relevant_doc_ids": ["doc_049", "doc_050"],
+    "topic": "semiconductor_policy_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_051 covers domestic investment, doc_008 allied coordination, and doc_007 technology-denial strategy."
+  },
+  {
+    "id": "q_094",
+    "query": "Which documents should be used to explain why semiconductor resilience claims need publication-date awareness?",
+    "expected_doc_ids": ["doc_001", "doc_050"],
+    "also_relevant_doc_ids": ["doc_003"],
+    "topic": "temporal_semiconductor_eval",
+    "difficulty": "hard",
+    "tests": "temporal_comparison",
+    "rationale": "doc_001 is an older baseline and doc_050 is newer resilience analysis."
+  },
+  {
+    "id": "q_095",
+    "query": "Which sources should support a human-review flag for export compliance, sanctions, or legal advice in semiconductor controls?",
+    "expected_doc_ids": ["doc_049", "doc_008"],
+    "also_relevant_doc_ids": ["doc_007", "doc_052"],
+    "topic": "export_control_human_review",
+    "difficulty": "hard",
+    "tests": "human_review_trigger",
+    "rationale": "doc_049 is official export-control context and doc_008 warns about allied legal authority differences."
+  },
+  {
+    "id": "q_096",
+    "query": "Which sources should be retrieved when the user asks how adversary tradecraft, cloud telemetry, and platform-scale reporting differ?",
+    "expected_doc_ids": ["doc_031", "doc_030", "doc_029"],
+    "also_relevant_doc_ids": ["doc_026"],
+    "topic": "cyber_threat_intelligence_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "CrowdStrike, Google Cloud, and Microsoft sources represent different telemetry and threat-intelligence perspectives."
+  },
+  {
+    "id": "q_097",
+    "query": "Which sources should be paired to explain that critical-infrastructure cyber defense requires both governance frameworks and incident-specific threat evidence?",
+    "expected_doc_ids": ["doc_021", "doc_026"],
+    "also_relevant_doc_ids": ["doc_022", "doc_027", "doc_059"],
+    "topic": "cyber_governance_and_threats",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_021 provides framework-level risk management while doc_026 provides incident-specific threat tradecraft."
+  },
+  {
+    "id": "q_098",
+    "query": "Which documents should answer how defense industrial strategy, NATO production capacity, and Ukraine war demand interact?",
+    "expected_doc_ids": ["doc_015", "doc_044", "doc_048"],
+    "also_relevant_doc_ids": ["doc_045", "doc_047", "doc_018"],
+    "topic": "defense_industrial_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "DoD strategy, NATO production planning, and RAND Ukraine war lessons cover interacting policy and demand signals."
+  },
+  {
+    "id": "q_099",
+    "query": "Which sources should support a comparison between public communication principles, whole-of-society resilience, and recurrent narrative databases?",
+    "expected_doc_ids": ["doc_020", "doc_055", "doc_056"],
+    "also_relevant_doc_ids": ["doc_053"],
+    "topic": "disinformation_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_020 covers response principles, doc_055 resilience, and doc_056 recurrent narrative tracking."
+  },
+  {
+    "id": "q_100",
+    "query": "Which sources should be retrieved when a user asks whether infrastructure risk is physical, cyber, informational, or governance-driven?",
+    "expected_doc_ids": ["doc_058", "doc_026", "doc_014", "doc_057"],
+    "also_relevant_doc_ids": ["doc_060", "doc_021", "doc_022"],
+    "topic": "critical_infrastructure_synthesis",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "This query requires local dependency mapping, cyber threat evidence, information-operations context, and governance responsibilities."
+  },
+  {
+    "id": "q_101",
+    "query": "A user asks for legal export-control compliance. Which source should outrank think-tank strategy explainers?",
+    "expected_doc_ids": ["doc_049"],
+    "also_relevant_doc_ids": ["doc_007", "doc_008", "doc_052"],
+    "topic": "export_control_compliance",
+    "difficulty": "hard",
+    "tests": "intent_routing",
+    "rationale": "doc_049 is the official BIS-oriented source and should be preferred for compliance context over strategy explainers."
+  },
+  {
+    "id": "q_102",
+    "query": "Which sources explain why allied legal authority and U.S. extraterritorial tools are both relevant to chip controls?",
+    "expected_doc_ids": ["doc_008", "doc_049"],
+    "also_relevant_doc_ids": ["doc_007"],
+    "topic": "export_control_governance",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_008 covers allied authority and doc_049 covers official U.S. advanced-computing and semiconductor control context."
+  },
+  {
+    "id": "q_103",
+    "query": "Which document should answer why lower-performance chip variants and threshold updates matter in export-control enforcement?",
+    "expected_doc_ids": ["doc_007"],
+    "also_relevant_doc_ids": ["doc_049", "doc_052"],
+    "topic": "export_controls",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_007 discusses firms adapting to controls and policymakers updating thresholds."
+  },
+  {
+    "id": "q_104",
+    "query": "Which source should be retrieved when the query is about compute denial and AI infrastructure rather than broad semiconductor manufacturing?",
+    "expected_doc_ids": ["doc_052"],
+    "also_relevant_doc_ids": ["doc_049", "doc_007"],
+    "topic": "ai_compute_controls",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_052 is the corpus source focused on AI chips, compute infrastructure, and export-control leverage."
+  },
+  {
+    "id": "q_105",
+    "query": "Which sources should be retrieved to compare policy instruments: domestic subsidies, allied controls, and official control rules?",
+    "expected_doc_ids": ["doc_051", "doc_008", "doc_049"],
+    "also_relevant_doc_ids": ["doc_007", "doc_050"],
+    "topic": "semiconductor_policy_synthesis",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_051 covers subsidies and industrial policy, doc_008 allied implementation, and doc_049 official controls."
+  },
+  {
+    "id": "q_106",
+    "query": "Which documents should explain why chip resilience can improve in fabrication while remaining constrained by equipment, EDA, materials, or packaging?",
+    "expected_doc_ids": ["doc_001", "doc_050"],
+    "also_relevant_doc_ids": ["doc_003", "doc_004"],
+    "topic": "semiconductor_resilience",
+    "difficulty": "hard",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_001 explains supply-chain stages and doc_050 explains continuing chokepoints despite resilience gains."
+  },
+  {
+    "id": "q_107",
+    "query": "Which source should be used if the user asks whether a single new fab removes ecosystem risk?",
+    "expected_doc_ids": ["doc_005"],
+    "also_relevant_doc_ids": ["doc_050", "doc_001"],
+    "topic": "taiwan_semiconductor_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_005 specifically warns that overseas fabs do not instantly reproduce Taiwan's dense ecosystem."
+  },
+  {
+    "id": "q_108",
+    "query": "Which documents should support a nuanced answer about Taiwan risk over different time horizons?",
+    "expected_doc_ids": ["doc_005", "doc_006", "doc_050"],
+    "also_relevant_doc_ids": ["doc_002"],
+    "topic": "taiwan_temporal_risk",
+    "difficulty": "hard",
+    "tests": "temporal_comparison",
+    "rationale": "doc_005 discusses near-term dependence, doc_006 crisis behavior, and doc_050 longer-run resilience changes."
+  },
+  {
+    "id": "q_109",
+    "query": "Which sources should be retrieved when a user asks how chip supply disruption could affect defense, cloud, telecom, and medical systems?",
+    "expected_doc_ids": ["doc_005", "doc_001"],
+    "also_relevant_doc_ids": ["doc_002", "doc_040"],
+    "topic": "semiconductor_downstream_dependencies",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_005 covers downstream sector dependence and doc_001 covers structural semiconductor supply-chain concepts."
+  },
+  {
+    "id": "q_110",
+    "query": "Which source should explain that crisis impact can be psychological and anticipatory, not only physical destruction?",
+    "expected_doc_ids": ["doc_006"],
+    "also_relevant_doc_ids": ["doc_005"],
+    "topic": "taiwan_crisis_scenarios",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_006 covers scenario exercises and anticipatory private-sector behavior."
+  },
+  {
+    "id": "q_111",
+    "query": "Which documents should be retrieved to distinguish mineral supply risk for chips from mineral supply risk for clean energy technologies?",
+    "expected_doc_ids": ["doc_004", "doc_033", "doc_035"],
+    "also_relevant_doc_ids": ["doc_034"],
+    "topic": "critical_minerals_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_004 is semiconductor-specific, while doc_033 and doc_035 cover energy technology and critical materials."
+  },
+  {
+    "id": "q_112",
+    "query": "Which source should answer country concentration for minerals rather than technology-policy implications?",
+    "expected_doc_ids": ["doc_034"],
+    "also_relevant_doc_ids": ["doc_033", "doc_004"],
+    "topic": "critical_minerals",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_034 is the USGS source for production and country-of-origin data."
+  },
+  {
+    "id": "q_113",
+    "query": "Which sources should be retrieved when a user asks how mineral bottlenecks, chip chokepoints, and industrial policy interact?",
+    "expected_doc_ids": ["doc_004", "doc_033", "doc_051"],
+    "also_relevant_doc_ids": ["doc_050", "doc_035"],
+    "topic": "critical_minerals_semiconductor_policy",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "This requires semiconductor mineral demand, broader critical minerals outlook, and U.S. semiconductor industrial policy."
+  },
+  {
+    "id": "q_114",
+    "query": "Which source should be retrieved for a broad maritime baseline if the query does not specify Red Sea only?",
+    "expected_doc_ids": ["doc_036"],
+    "also_relevant_doc_ids": ["doc_009", "doc_037"],
+    "topic": "maritime_source_routing",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_036 is the broad Review of Maritime Transport baseline."
+  },
+  {
+    "id": "q_115",
+    "query": "Which documents should distinguish security risk to vessels from economic pass-through into prices and growth?",
+    "expected_doc_ids": ["doc_038", "doc_037", "doc_039"],
+    "also_relevant_doc_ids": ["doc_009"],
+    "topic": "maritime_security_economics",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_038 covers maritime security, doc_037 economic transmission, and doc_039 macroeconomic risk."
+  },
+  {
+    "id": "q_116",
+    "query": "Which source should be used when the user asks why rerouting creates emissions and schedule-reliability tradeoffs?",
+    "expected_doc_ids": ["doc_009"],
+    "also_relevant_doc_ids": ["doc_036", "doc_037"],
+    "topic": "maritime_supply_chain_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_009 discusses rerouting, fuel use, emissions, delays, and trade-offs."
+  },
+  {
+    "id": "q_117",
+    "query": "Which sources should be retrieved when a user asks whether a disruption number from early 2024 is still current?",
+    "expected_doc_ids": ["doc_009", "doc_036"],
+    "also_relevant_doc_ids": ["doc_037", "doc_010"],
+    "topic": "maritime_temporal_risk",
+    "difficulty": "hard",
+    "tests": "temporal_comparison",
+    "rationale": "doc_009 warns about date qualification and doc_036 provides broader maritime context."
+  },
+  {
+    "id": "q_118",
+    "query": "Which sources should support a Ukraine energy answer that separates repair needs, decentralization, and general grid-system constraints?",
+    "expected_doc_ids": ["doc_011", "doc_012", "doc_040"],
+    "also_relevant_doc_ids": ["doc_041"],
+    "topic": "ukraine_energy_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_011 covers wartime energy security, doc_012 decentralization, and doc_040 grid-system constraints."
+  },
+  {
+    "id": "q_119",
+    "query": "Which source should answer a question about substations, transformers, interconnections, and grid controls?",
+    "expected_doc_ids": ["doc_040"],
+    "also_relevant_doc_ids": ["doc_058", "doc_011"],
+    "topic": "electricity_grid_resilience",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_040 covers electricity networks beyond generation capacity."
+  },
+  {
+    "id": "q_120",
+    "query": "Which sources should be paired when a user asks how attacks on energy infrastructure affect civilians and reconstruction priorities?",
+    "expected_doc_ids": ["doc_011", "doc_041", "doc_042"],
+    "also_relevant_doc_ids": ["doc_019"],
+    "topic": "ukraine_civilian_infrastructure",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_011 covers energy security, doc_041 reconstruction damage, and doc_042 humanitarian impact."
+  },
+  {
+    "id": "q_121",
+    "query": "Which source should be retrieved when a user asks for event data rather than narrative military analysis?",
+    "expected_doc_ids": ["doc_019"],
+    "also_relevant_doc_ids": ["doc_043"],
+    "topic": "ukraine_osint_monitoring",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_019 is ACLED event monitoring, while doc_043 is ISW narrative campaign assessment."
+  },
+  {
+    "id": "q_122",
+    "query": "Which sources should be retrieved if a user asks whether high event counts contradict stable front lines?",
+    "expected_doc_ids": ["doc_019", "doc_043"],
+    "also_relevant_doc_ids": [],
+    "topic": "ukraine_contradiction_handling",
+    "difficulty": "hard",
+    "tests": "contradiction_probe",
+    "rationale": "doc_019 event intensity and doc_043 territorial/military analysis can differ without contradiction."
+  },
+  {
+    "id": "q_123",
+    "query": "Which cyber source should answer why defenders cannot rely only on malware hashes for Volt Typhoon?",
+    "expected_doc_ids": ["doc_026"],
+    "also_relevant_doc_ids": ["doc_022", "doc_031"],
+    "topic": "cyber_threat_tradecraft",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_026 emphasizes living-off-the-land, legitimate tools, credentials, and network appliances."
+  },
+  {
+    "id": "q_124",
+    "query": "Which sources should map identity hardening, segmentation, logging, and secure remote access to a real threat advisory?",
+    "expected_doc_ids": ["doc_026", "doc_022"],
+    "also_relevant_doc_ids": ["doc_021", "doc_059"],
+    "topic": "cyber_defense_mapping",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_026 gives threat tradecraft and doc_022 provides control categories."
+  },
+  {
+    "id": "q_125",
+    "query": "Which source should be retrieved if the query asks for a catalog-based prioritization of vulnerabilities already exploited in the wild?",
+    "expected_doc_ids": ["doc_023"],
+    "also_relevant_doc_ids": ["doc_022", "doc_021"],
+    "topic": "vulnerability_prioritization",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_023 covers the Known Exploited Vulnerabilities Catalog as active exploitation evidence."
+  },
+  {
+    "id": "q_126",
+    "query": "Which sources should be retrieved when the user asks for live remediation or attribution claims about critical-infrastructure intrusions?",
+    "expected_doc_ids": ["doc_026", "doc_027", "doc_059"],
+    "also_relevant_doc_ids": ["doc_022"],
+    "topic": "cyber_human_review",
+    "difficulty": "hard",
+    "tests": "human_review_trigger",
+    "rationale": "Threat advisories and heightened posture guidance involve high-stakes cyber incident response and attribution."
+  },
+  {
+    "id": "q_127",
+    "query": "Which source should answer whether secure software guidance places more burden on vendors rather than asset owners?",
+    "expected_doc_ids": ["doc_024"],
+    "also_relevant_doc_ids": ["doc_022", "doc_025"],
+    "topic": "secure_by_design",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_024 covers the shift of cyber risk toward technology producers."
+  },
+  {
+    "id": "q_128",
+    "query": "Which sources should compare cloud-specific threat intelligence, platform telemetry, and adversary tradecraft reporting?",
+    "expected_doc_ids": ["doc_030", "doc_029", "doc_031"],
+    "also_relevant_doc_ids": [],
+    "topic": "cyber_threat_intelligence_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "Google Cloud, Microsoft, and CrowdStrike provide different threat-intelligence vantage points."
+  },
+  {
+    "id": "q_129",
+    "query": "Which source should be retrieved if the query asks for European threat landscape rather than vendor telemetry?",
+    "expected_doc_ids": ["doc_028"],
+    "also_relevant_doc_ids": ["doc_029", "doc_031"],
+    "topic": "european_cyber_risk",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_028 is ENISA's European threat landscape source."
+  },
+  {
+    "id": "q_130",
+    "query": "Which source should be retrieved when the user asks about trustworthy AI risk management rather than cybersecurity or OSINT?",
+    "expected_doc_ids": ["doc_032"],
+    "also_relevant_doc_ids": [],
+    "topic": "ai_governance",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_032 covers the NIST AI Risk Management Framework."
+  },
+  {
+    "id": "q_131",
+    "query": "Which sources should support a defense answer that distinguishes strategy, implementation, oversight, and wartime lessons?",
+    "expected_doc_ids": ["doc_015", "doc_045", "doc_046", "doc_048"],
+    "also_relevant_doc_ids": ["doc_017"],
+    "topic": "defense_industrial_governance",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "The sources separate policy strategy, implementation planning, GAO oversight, and Russia-Ukraine war lessons."
+  },
+  {
+    "id": "q_132",
+    "query": "Which source should answer whether NATO production language is official policy or external analysis of bottlenecks?",
+    "expected_doc_ids": ["doc_044", "doc_047"],
+    "also_relevant_doc_ids": ["doc_045"],
+    "topic": "nato_defense_industry",
+    "difficulty": "hard",
+    "tests": "source_type_routing",
+    "rationale": "doc_044 is official NATO action-plan language and doc_047 is RAND bottleneck analysis."
+  },
+  {
+    "id": "q_133",
+    "query": "Which source should be retrieved when the question asks what DoD may not know about sub-tier suppliers?",
+    "expected_doc_ids": ["doc_046"],
+    "also_relevant_doc_ids": ["doc_017", "doc_025"],
+    "topic": "defense_supply_chain_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_046 covers gaps in supplier visibility and country-of-origin data."
+  },
+  {
+    "id": "q_134",
+    "query": "Which documents should connect munition consumption, drone attrition, air-defense demand, repair needs, and industrial throughput?",
+    "expected_doc_ids": ["doc_048"],
+    "also_relevant_doc_ids": ["doc_018", "doc_044", "doc_045"],
+    "topic": "defense_industrial_lessons",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_048 directly covers defense industrial lessons from high-intensity war."
+  },
+  {
+    "id": "q_135",
+    "query": "Which source should answer how DIB cybersecurity differs from general critical-infrastructure cybersecurity controls?",
+    "expected_doc_ids": ["doc_016"],
+    "also_relevant_doc_ids": ["doc_022", "doc_021"],
+    "topic": "defense_cybersecurity",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_016 is specific to DoD defense industrial base cybersecurity strategy."
+  },
+  {
+    "id": "q_136",
+    "query": "Which sources should explain how a false narrative response differs from detecting repeated narrative patterns?",
+    "expected_doc_ids": ["doc_020", "doc_056"],
+    "also_relevant_doc_ids": ["doc_055", "doc_053"],
+    "topic": "disinformation_osint",
+    "difficulty": "hard",
+    "tests": "intent_routing",
+    "rationale": "doc_020 covers response communication while doc_056 covers recurrent narrative tracking."
+  },
+  {
+    "id": "q_137",
+    "query": "Which source should be retrieved if a user asks for Russian influence operations linked to cyber-enabled narratives?",
+    "expected_doc_ids": ["doc_054"],
+    "also_relevant_doc_ids": ["doc_053", "doc_056"],
+    "topic": "russian_influence_operations",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_054 is Microsoft Threat Analysis Center material on Russian influence and cyber-enabled narratives."
+  },
+  {
+    "id": "q_138",
+    "query": "Which sources should support a human-review trigger when the user asks for persuasive counter-messaging aimed at a live audience?",
+    "expected_doc_ids": ["doc_056", "doc_020", "doc_055"],
+    "also_relevant_doc_ids": ["doc_053"],
+    "topic": "disinformation_human_review",
+    "difficulty": "hard",
+    "tests": "human_review_trigger",
+    "rationale": "Narrative tracking and public communication sources include risks around persuasive messaging and live information environments."
+  },
+  {
+    "id": "q_139",
+    "query": "Which source should be retrieved when the query asks about FIMI rather than ordinary misinformation response?",
+    "expected_doc_ids": ["doc_053"],
+    "also_relevant_doc_ids": ["doc_020", "doc_055"],
+    "topic": "fimi_disinformation",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_053 is the EEAS report on foreign information manipulation and interference."
+  },
+  {
+    "id": "q_140",
+    "query": "Which sources should answer how foreign influence operations can target critical infrastructure operators and public trust?",
+    "expected_doc_ids": ["doc_014", "doc_020", "doc_055"],
+    "also_relevant_doc_ids": ["doc_057"],
+    "topic": "critical_infrastructure_information_operations",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_014 covers influence operations targeting infrastructure, while OECD sources cover response and resilience."
+  },
+  {
+    "id": "q_141",
+    "query": "Which source should be retrieved if a user asks whether a visible asset is always the most critical asset?",
+    "expected_doc_ids": ["doc_058"],
+    "also_relevant_doc_ids": ["doc_057", "doc_060"],
+    "topic": "critical_infrastructure_resilience",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_058 distinguishes criticality from visibility using dependency mapping."
+  },
+  {
+    "id": "q_142",
+    "query": "Which sources should distinguish DHS strategic priorities, sector agency responsibilities, and White House national policy?",
+    "expected_doc_ids": ["doc_013", "doc_057", "doc_060"],
+    "also_relevant_doc_ids": [],
+    "topic": "critical_infrastructure_governance",
+    "difficulty": "hard",
+    "tests": "source_type_routing",
+    "rationale": "These documents represent different levels and source types in critical-infrastructure governance."
+  },
+  {
+    "id": "q_143",
+    "query": "Which sources should answer how local lifeline dependencies and cyber baseline controls interact in resilience planning?",
+    "expected_doc_ids": ["doc_058", "doc_022"],
+    "also_relevant_doc_ids": ["doc_021", "doc_059"],
+    "topic": "critical_infrastructure_cyber_resilience",
+    "difficulty": "hard",
+    "tests": "cross_topic",
+    "rationale": "doc_058 covers local dependencies and doc_022 covers baseline cyber controls."
+  },
+  {
+    "id": "q_144",
+    "query": "Which source should be retrieved when a user asks who owns sector-level critical-infrastructure risk responsibility?",
+    "expected_doc_ids": ["doc_057"],
+    "also_relevant_doc_ids": ["doc_013", "doc_060"],
+    "topic": "critical_infrastructure_governance",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_057 explains sector risk management agencies and responsibilities."
+  },
+  {
+    "id": "q_145",
+    "query": "Which documents should be retrieved when the query asks for national policy, operational preparedness, and local planning in one answer?",
+    "expected_doc_ids": ["doc_060", "doc_059", "doc_058"],
+    "also_relevant_doc_ids": ["doc_057", "doc_022"],
+    "topic": "critical_infrastructure_synthesis",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_060 covers national policy, doc_059 heightened preparedness, and doc_058 local planning."
+  },
+  {
+    "id": "q_146",
+    "query": "Which sources should answer whether a security incident involving infrastructure should be treated as cyber, influence, or resilience governance?",
+    "expected_doc_ids": ["doc_026", "doc_014", "doc_057", "doc_058"],
+    "also_relevant_doc_ids": ["doc_060", "doc_022"],
+    "topic": "critical_infrastructure_agentic_routing",
+    "difficulty": "hard",
+    "tests": "agentic_routing",
+    "rationale": "The query requires routing across cyber threat evidence, influence operations, governance, and local resilience planning."
+  },
+  {
+    "id": "q_147",
+    "query": "Which documents should be retrieved before an assistant decides whether to trigger human review for critical infrastructure, active conflict, cyber, or sanctions topics?",
+    "expected_doc_ids": ["doc_058", "doc_019", "doc_026", "doc_049"],
+    "also_relevant_doc_ids": ["doc_060", "doc_027", "doc_008"],
+    "topic": "human_review_policy",
+    "difficulty": "hard",
+    "tests": "human_review_trigger",
+    "rationale": "These documents represent high-stakes infrastructure, conflict, cyber, and export-control/sanctions contexts."
+  },
+  {
+    "id": "q_148",
+    "query": "Which sources should help an agent decide whether to do a second retrieval for recency-sensitive claims?",
+    "expected_doc_ids": ["doc_007", "doc_009", "doc_019", "doc_050"],
+    "also_relevant_doc_ids": ["doc_049", "doc_036"],
+    "topic": "agentic_recency_routing",
+    "difficulty": "hard",
+    "tests": "agentic_routing",
+    "rationale": "Export controls, maritime disruption figures, conflict-event counts, and semiconductor resilience claims all require date awareness."
+  },
+  {
+    "id": "q_149",
+    "query": "Which sources should be retrieved for a question that asks the assistant to compare official sources, think-tank analysis, and vendor telemetry?",
+    "expected_doc_ids": ["doc_049", "doc_007", "doc_029"],
+    "also_relevant_doc_ids": ["doc_030", "doc_031"],
+    "topic": "source_type_comparison",
+    "difficulty": "hard",
+    "tests": "source_type_routing",
+    "rationale": "doc_049 is official, doc_007 is think-tank analysis, and doc_029 is vendor telemetry."
+  },
+  {
+    "id": "q_150",
+    "query": "Which documents should be retrieved when a user asks for a grounded OSINT answer that includes citations, unknowns, contradictions, confidence, and human review?",
+    "expected_doc_ids": ["doc_019", "doc_007", "doc_058", "doc_026"],
+    "also_relevant_doc_ids": ["doc_009", "doc_046", "doc_056"],
+    "topic": "rag_answer_quality",
+    "difficulty": "hard",
+    "tests": "agentic_routing",
+    "rationale": "These sources exercise core RAG answer-quality dimensions: active conflict data, policy churn, infrastructure risk, and cyber threat evidence."
+  },
+  {
+    "id": "q_151",
+    "query": "Which source should answer what risks foreign suppliers create for the defense industrial base?",
+    "expected_doc_ids": ["doc_017"],
+    "also_relevant_doc_ids": ["doc_046", "doc_025"],
+    "topic": "defense_supply_chain_risk",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_017 directly covers dependence on foreign suppliers in the defense industrial base."
+  },
+  {
+    "id": "q_152",
+    "query": "Which source should be retrieved when the question asks how Russia's war affects allied defense industrial bases rather than battlefield updates?",
+    "expected_doc_ids": ["doc_018"],
+    "also_relevant_doc_ids": ["doc_048", "doc_044"],
+    "topic": "defense_industrial_base",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_018 focuses on implications of Russia's war for U.S. and allied defense industrial bases."
+  },
+  {
+    "id": "q_153",
+    "query": "Which source should answer technology dependency risk in ICT supply chains rather than military supplier oversight?",
+    "expected_doc_ids": ["doc_025"],
+    "also_relevant_doc_ids": ["doc_046", "doc_017"],
+    "topic": "ict_supply_chain_risk",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_025 is CISA's ICT supply-chain risk management source, distinct from defense supplier oversight."
+  },
+  {
+    "id": "q_154",
+    "query": "Which documents should be paired to explain Indo-Pacific semiconductor geography and broader supply-chain stage specialization?",
+    "expected_doc_ids": ["doc_002", "doc_001"],
+    "also_relevant_doc_ids": ["doc_005"],
+    "topic": "semiconductor_geography",
+    "difficulty": "hard",
+    "tests": "multi_document",
+    "rationale": "doc_002 maps Indo-Pacific semiconductor geography and doc_001 explains supply-chain stages."
+  },
+  {
+    "id": "q_155",
+    "query": "Which source should be retrieved for an industry resilience view from SIA and BCG rather than a government industrial-policy document?",
+    "expected_doc_ids": ["doc_003"],
+    "also_relevant_doc_ids": ["doc_050", "doc_051"],
+    "topic": "semiconductor_resilience",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_003 is the SIA/BCG industry resilience source, while doc_051 is government industrial policy."
+  },
+  {
+    "id": "q_156",
+    "query": "Which source should answer a query about a short UNCTAD alert rather than the full maritime transport review?",
+    "expected_doc_ids": ["doc_010"],
+    "also_relevant_doc_ids": ["doc_009", "doc_036"],
+    "topic": "maritime_source_routing",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_010 is the short UNCTAD article, while doc_036 is the broad review."
+  },
+  {
+    "id": "q_157",
+    "query": "Which source should be retrieved when the user asks about decentralized energy as an alternative to centralized Ukrainian grid vulnerability?",
+    "expected_doc_ids": ["doc_012"],
+    "also_relevant_doc_ids": ["doc_011", "doc_040"],
+    "topic": "ukraine_energy_resilience",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_012 is specifically about empowering Ukraine through a decentralised electricity system."
+  },
+  {
+    "id": "q_158",
+    "query": "Which source should be retrieved for DHS strategic priorities rather than White House national-security memorandum language?",
+    "expected_doc_ids": ["doc_013"],
+    "also_relevant_doc_ids": ["doc_060", "doc_057"],
+    "topic": "critical_infrastructure_policy",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_013 is DHS strategic guidance, while doc_060 is White House national policy."
+  },
+  {
+    "id": "q_159",
+    "query": "Which source should answer how the defense industrial base cybersecurity strategy differs from supply-chain strategy?",
+    "expected_doc_ids": ["doc_016"],
+    "also_relevant_doc_ids": ["doc_015", "doc_025"],
+    "topic": "defense_cybersecurity",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_016 is about DIB cybersecurity strategy, not general industrial or ICT supply-chain policy."
+  },
+  {
+    "id": "q_160",
+    "query": "Which source should be retrieved if a user asks why exploited vulnerabilities deserve different priority from theoretical vulnerabilities?",
+    "expected_doc_ids": ["doc_023"],
+    "also_relevant_doc_ids": ["doc_022", "doc_021"],
+    "topic": "vulnerability_intelligence",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_023 treats the KEV catalog as evidence of active exploitation risk."
+  },
+  {
+    "id": "q_161",
+    "query": "Which source should answer why software vendors should reduce default risk before customers deploy products?",
+    "expected_doc_ids": ["doc_024"],
+    "also_relevant_doc_ids": ["doc_022", "doc_025"],
+    "topic": "secure_by_design",
+    "difficulty": "medium",
+    "tests": "semantic_paraphrase",
+    "rationale": "doc_024 covers Secure by Design and producer responsibility."
+  },
+  {
+    "id": "q_162",
+    "query": "Which source should be retrieved when a user asks about Russian cyber threats rather than Russian influence operations?",
+    "expected_doc_ids": ["doc_027"],
+    "also_relevant_doc_ids": ["doc_054", "doc_059"],
+    "topic": "russian_cyber_threats",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_027 covers Russian state-sponsored and criminal cyber threats; doc_054 covers influence operations."
+  },
+  {
+    "id": "q_163",
+    "query": "Which source should answer European cyber risk trends without relying on U.S. agency guidance?",
+    "expected_doc_ids": ["doc_028"],
+    "also_relevant_doc_ids": ["doc_021", "doc_022"],
+    "topic": "european_cyber_risk",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_028 is ENISA's European cyber threat landscape source."
+  },
+  {
+    "id": "q_164",
+    "query": "Which source should be retrieved for DOE critical materials assessment rather than IEA global critical minerals outlook?",
+    "expected_doc_ids": ["doc_035"],
+    "also_relevant_doc_ids": ["doc_033", "doc_034"],
+    "topic": "critical_materials",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_035 is the DOE critical materials assessment, distinct from IEA and USGS sources."
+  },
+  {
+    "id": "q_165",
+    "query": "Which source should answer NATO bottlenecks from an external analysis perspective rather than official NATO production commitments?",
+    "expected_doc_ids": ["doc_047"],
+    "also_relevant_doc_ids": ["doc_044"],
+    "topic": "nato_defense_industry",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_047 is RAND analysis of NATO defense industrial base constraints."
+  },
+  {
+    "id": "q_166",
+    "query": "Which source should be retrieved for AI chips as compute infrastructure if the query does not mention export compliance law?",
+    "expected_doc_ids": ["doc_052"],
+    "also_relevant_doc_ids": ["doc_049", "doc_007"],
+    "topic": "ai_chips_export_controls",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_052 is the AI chips and compute infrastructure source, while doc_049 is official compliance context."
+  },
+  {
+    "id": "q_167",
+    "query": "Which source should answer cloud-specific threat horizons rather than Microsoft platform-scale digital defense reporting?",
+    "expected_doc_ids": ["doc_030"],
+    "also_relevant_doc_ids": ["doc_029", "doc_031"],
+    "topic": "cloud_security",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_030 is Google Cloud Threat Horizons, distinct from Microsoft and CrowdStrike reporting."
+  },
+  {
+    "id": "q_168",
+    "query": "Which source should answer CrowdStrike-style adversary tradecraft rather than cloud provider threat horizons?",
+    "expected_doc_ids": ["doc_031"],
+    "also_relevant_doc_ids": ["doc_030", "doc_029"],
+    "topic": "adversary_tradecraft",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_031 is CrowdStrike Global Threat Report and focuses on adversary tradecraft trends."
+  },
+  {
+    "id": "q_169",
+    "query": "Which source should be retrieved for Ukraine humanitarian response rather than reconstruction damage accounting?",
+    "expected_doc_ids": ["doc_042"],
+    "also_relevant_doc_ids": ["doc_041", "doc_019"],
+    "topic": "ukraine_humanitarian",
+    "difficulty": "medium",
+    "tests": "intent_routing",
+    "rationale": "doc_042 is OCHA humanitarian needs and response planning; doc_041 is reconstruction and damage assessment."
+  },
+  {
+    "id": "q_170",
+    "query": "Which source should answer Russian offensive campaign assessment rather than ACLED event monitoring?",
+    "expected_doc_ids": ["doc_043"],
+    "also_relevant_doc_ids": ["doc_019"],
+    "topic": "ukraine_conflict_analysis",
+    "difficulty": "medium",
+    "tests": "source_type_routing",
+    "rationale": "doc_043 is ISW campaign assessment; doc_019 is ACLED event monitoring."
+  }
+]

@@ -1,0 +1,18 @@
+TITLE: Defense Industrial Lessons from the Russia-Ukraine War
+SOURCE_ORG: RAND Corporation
+URL: https://www.rand.org/pubs/research_reports/RRA3119-1.html
+TOPIC_CATEGORY: Defense industrial base / Ukraine war / lessons learned
+SUGGESTED_FILENAME: doc_048_rand_russia_ukraine_war_defense_industrial_lessons.txt
+
+SUMMARY:
+RAND research on defense industrial lessons from the Russia-Ukraine war examines munition consumption, industrial preparedness, procurement flexibility, allied coordination, and supply-chain stress. It is relevant because battlefield demand exposed limits in peacetime production models. The source helps a RAG assistant connect conflict intensity with industrial throughput and replenishment. It should be paired with official DoD and NATO strategy documents to compare lessons learned with policy response.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for connecting war consumption rates to industrial planning and alliance resilience.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a user asks why modern war stresses defense industry. A RAG assistant should explain that high munition expenditure, drone attrition, air-defense demand, and equipment repair can exceed peacetime assumptions.
+The report is valuable for identifying mitigation levers: multiyear procurement, stockpile planning, production-line investment, allied standardization, supply-chain mapping, and faster contracting. It also helps distinguish immediate battlefield aid from long-term industrial-base resilience.
+For contradiction testing, pair this source with RDNA, NATO, and DoD documents. Human review should trigger for operational military advice, current stockpile claims, or procurement recommendations.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

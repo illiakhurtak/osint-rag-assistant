@@ -1,0 +1,18 @@
+TITLE: Global Economic Prospects 2024 and Supply-Disruption Risk Channels
+SOURCE_ORG: World Bank
+URL: https://www.worldbank.org/en/publication/global-economic-prospects
+TOPIC_CATEGORY: Macroeconomic risk / supply chains / trade disruption
+SUGGESTED_FILENAME: doc_039_world_bank_global_economic_prospects_2024_supply_disruptions.txt
+
+SUMMARY:
+World Bank Global Economic Prospects reports discuss global growth, trade, inflation, commodity markets, conflict, and policy risk. For an OSINT RAG demo, the source helps translate supply-chain shocks into macroeconomic channels such as trade costs, inflation, financing stress, commodity prices, and growth uncertainty. It should not be used for hyper-specific incident claims, but it is useful for background risk framing and for explaining why repeated shocks can affect developing economies differently from high-income economies.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Good macro baseline for connecting geopolitical events to trade and economic risk.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used as macroeconomic context. A RAG assistant should use it to explain channels rather than to prove a specific incident. Supply disruption can affect global growth through higher transport costs, commodity price volatility, lower confidence, delayed investment, and tighter financial conditions.
+The report is useful for distinguishing global averages from regional exposure. Economies that rely heavily on imported fuel, food, shipping, or external financing may face different risks from countries with deeper buffers.
+For contradiction testing, pair this source with UNCTAD maritime reports and sector-specific documents. Human review should trigger for investment advice, forecasts, or policy recommendations based on incomplete evidence.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

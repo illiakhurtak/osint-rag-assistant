@@ -1,0 +1,18 @@
+TITLE: EUvsDisinfo Database and Recurrent Disinformation Narratives
+SOURCE_ORG: EUvsDisinfo / East StratCom Task Force
+URL: https://euvsdisinfo.eu/disinformation-cases/
+TOPIC_CATEGORY: Disinformation / narrative tracking / Europe
+SUGGESTED_FILENAME: doc_056_euvsdisinfo_fimi_database_and_narratives.txt
+
+SUMMARY:
+EUvsDisinfo tracks disinformation cases and recurring narratives, especially those linked to pro-Kremlin information activity. It is relevant because a RAG assistant can use narrative databases to identify repeated themes, but must avoid treating every database entry as proof of coordinated activity in a specific incident. The source helps test retrieval over claims, debunks, narratives, countries, topics, and dates. It pairs with OECD and EEAS material for response principles and FIMI taxonomy.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for testing narrative retrieval and careful handling of debunked or manipulative claims.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a user asks whether a narrative has appeared before or how a theme has been framed in disinformation ecosystems. A RAG assistant should summarize the pattern without needlessly restating false claims.
+The database is useful for entity extraction across countries, topics, narratives, sources, and dates. It can help identify repeated claims around Ukraine, NATO, the EU, migration, sanctions, energy, and public trust.
+For contradiction testing, pair EUvsDisinfo with OECD and EEAS documents. Human review should trigger when a query asks the assistant to produce persuasive counter-messaging, target an audience, or evaluate a live election narrative.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

@@ -1,0 +1,11 @@
+openai
+python-dotenv
+numpy
+scikit-learn
+pydantic
+tqdm
+rank-bm25
+langchain
+langgraph
+langchain-openai
+pandas

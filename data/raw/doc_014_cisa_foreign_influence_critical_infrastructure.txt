@@ -1,0 +1,22 @@
+TITLE: Preparing for and Mitigating Foreign Influence Operations Targeting Critical Infrastructure
+SOURCE_ORG: CISA
+URL: https://www.cisa.gov/sites/default/files/2023-01/cisa_insight_mitigating_foreign_influence_508.pdf
+TOPIC_CATEGORY: Critical infrastructure security / information operations
+SUGGESTED_FILENAME: doc_014_cisa_foreign_influence_critical_infrastructure.txt
+
+SUMMARY:
+This CISA insight addresses foreign influence operations that target critical infrastructure owners and operators. It explains that information manipulation can create reputational, operational, and public-trust risks even when infrastructure is not physically damaged. The source is useful because it connects disinformation to infrastructure resilience. It can help the assistant identify human-review flags when narratives about infrastructure incidents may be manipulated. It also supports OSINT workflows that separate verified incident evidence from amplification, rumor, or adversary messaging. This source overlaps with OECD disinformation guidance and Microsoft threat reporting, making it useful for contradiction and attribution testing.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Good bridge source between critical infrastructure and information operations. Useful for detecting when an incident summary needs source-verification and narrative-risk warnings.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source connects two areas that are often treated separately: critical infrastructure and influence operations. Its core idea is that adversaries can target infrastructure not only by attacking systems, but also by manipulating public perception around those systems. False or misleading claims about outages, contamination, election systems, emergency response, or security failures can reduce trust, create panic, distract operators, or pressure decision-makers.
+
+A RAG assistant should use this source to flag narrative risk. When a query involves infrastructure incidents, the assistant should ask: is there verified evidence of physical or cyber disruption, or only claims circulating online? Are the claims coming from official sources, credible media, researchers, anonymous accounts, or state-linked channels? Is the narrative designed to exaggerate damage, undermine confidence, or create confusion? The system should distinguish between an incident and an influence campaign about an incident.
+
+This source is valuable for OSINT workflows because it encourages evidence grading. A strong answer should cite official advisories, operator statements, sensor or outage data, and multiple independent sources where possible. It should mark unknowns if only social-media claims are available. It should also describe what would increase confidence: confirmation by the infrastructure operator, emergency services, regulator, satellite imagery, network telemetry, or consistent local reporting.
+
+For contradiction detection, this document can be paired with disinformation and cyber-threat reports. One source may describe a real cyber threat; another may describe false narratives about cyber threats. The assistant should avoid assuming that every alarming claim is false or that every claim is true. Human review should be triggered when unverified information concerns public safety, infrastructure reliability, elections, water, power, or hospitals. The assistant should also avoid amplifying operationally sensitive details that could help attackers.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.

@@ -1,0 +1,18 @@
+TITLE: NATO Defence Production Action Plan and Allied Industrial Capacity
+SOURCE_ORG: NATO
+URL: https://www.nato.int/cps/en/natohq/official_texts_217057.htm
+TOPIC_CATEGORY: Defense industrial base / NATO / production capacity
+SUGGESTED_FILENAME: doc_044_nato_defence_production_action_plan.txt
+
+SUMMARY:
+NATO Defence Production Action Plan focuses on strengthening allied defense production, procurement cooperation, interoperability, and stockpile replenishment. It is relevant because the war in Ukraine highlighted constraints in ammunition, air defense, missiles, industrial surge capacity, and long-term procurement signals. The source helps a RAG assistant explain why defense-industrial resilience depends on demand signals, multiyear contracts, standardization, investment, and cross-border coordination. It pairs well with RAND, DoD, and GAO sources.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for alliance-level defense production and procurement coordination questions.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when the question concerns allied defense production capacity rather than one country alone. A RAG assistant should identify stockpiles, munitions production, procurement planning, industrial investment, interoperability, and supply-chain security as related but distinct issues.
+The plan is valuable for explaining why industry may not expand output quickly without predictable demand, financing, workforce, and contract structures. Production bottlenecks may involve machine tools, explosives, propellants, electronics, skilled labor, and certification.
+For contradiction testing, pair NATO strategy language with RAND and GAO implementation-focused assessments. Human review should trigger for procurement, export controls, or operational military logistics.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

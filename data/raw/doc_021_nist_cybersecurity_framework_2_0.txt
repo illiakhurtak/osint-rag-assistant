@@ -1,0 +1,18 @@
+TITLE: The NIST Cybersecurity Framework 2.0 as a Baseline for Critical-Infrastructure Risk Management
+SOURCE_ORG: NIST
+URL: https://www.nist.gov/cyberframework
+TOPIC_CATEGORY: Cybersecurity / critical infrastructure / risk management
+SUGGESTED_FILENAME: doc_021_nist_cybersecurity_framework_2_0.txt
+
+SUMMARY:
+NIST Cybersecurity Framework 2.0 gives a common language for identifying, protecting, detecting, responding to, recovering from, and governing cybersecurity risk. It is relevant to an OSINT RAG demo because it turns diverse incident reporting into structured risk-management concepts. The source helps the assistant classify whether a claim concerns assets, safeguards, monitoring, response, recovery, or governance. It also helps compare technical cyber reporting with executive-level resilience requirements. The document is especially useful when users ask how a cyber threat affects an operator, supplier, or public agency rather than asking only for indicators of compromise.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Strong baseline for mapping open-source cyber evidence into governance, function, category, and outcome labels.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be treated as a control vocabulary for cybersecurity retrieval. A RAG assistant can use it to normalize incident reports, vendor blogs, government advisories, and policy documents into six high-level functions: govern, identify, protect, detect, respond, and recover. That structure prevents the model from treating all cyber information as threat intelligence. Some documents describe attacker behavior, while others describe asset inventory, identity controls, backup practices, incident communications, or board oversight.
+For OSINT analysis, the framework is useful because it separates risk from single events. A ransomware incident, a supply-chain compromise, or a foreign intrusion can be mapped to affected assets, vulnerabilities, consequences, controls, and recovery objectives. The assistant should distinguish evidence of compromise from evidence of exposure and should avoid implying that a vulnerability has been exploited unless a source supports that claim.
+For contradiction testing, pair this document with CISA advisories and vendor threat reports. Threat reports may emphasize adversary tactics; NIST helps explain what an organization should do with that information. Human review should trigger when a user asks for operational defensive actions for a live system or when the retrieved evidence concerns essential services such as power, water, health care, transport, or communications.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

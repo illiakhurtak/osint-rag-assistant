@@ -1,0 +1,22 @@
+TITLE: Strategic Guidance and National Priorities for U.S. Critical Infrastructure Security and Resilience
+SOURCE_ORG: U.S. Department of Homeland Security
+URL: https://www.dhs.gov/sites/default/files/2024-06/24_0620_sec_2024-strategic-guidance-national-priorities-u-s-critical-infrastructure-security-resilience.pdf
+TOPIC_CATEGORY: Critical infrastructure security
+SUGGESTED_FILENAME: doc_013_critical_infrastructure_guidance_dhs.txt
+
+SUMMARY:
+This DHS guidance sets priorities for U.S. critical infrastructure security and resilience. It reflects concern about cyberattacks, physical sabotage, natural hazards, and cross-sector dependencies. The source is useful because it provides official terminology for critical infrastructure sectors and risk-management responsibilities. It helps a RAG assistant separate threat, vulnerability, consequence, and resilience measures. It can be paired with energy and defense supply-chain sources because many infrastructure sectors depend on electricity, communications, transport, and digital systems. It also supports human-review flags for high-consequence sectors. The source is official and appropriate for a public corpus.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful official baseline for critical-infrastructure vocabulary, risk categories, cross-sector dependencies, and resilience framing.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used as an official critical-infrastructure framing document. Its main value is not a single incident report but a vocabulary and prioritization structure. Critical infrastructure security involves cyber threats, physical threats, insider risks, natural hazards, supply-chain failures, and dependencies across sectors. A RAG system should learn to separate threat actors from vulnerabilities and consequences. For example, a cyber group is a threat actor, an exposed operational technology network is a vulnerability, and loss of water treatment or power distribution is a consequence.
+
+The guidance is useful for queries about cross-sector risk. Electricity supports communications, water, healthcare, transport, finance, and emergency response. Telecommunications support grid operations, logistics, and public warning. Transportation supports fuel, food, medical supplies, and military mobility. A disruption in one sector can therefore propagate across others. The assistant should avoid treating critical-infrastructure incidents as isolated unless the evidence supports isolation.
+
+For situational summaries, this source helps the assistant describe resilience measures in general categories: risk assessment, information sharing, public-private coordination, incident response planning, continuity planning, cyber hygiene, physical security, workforce readiness, supply-chain visibility, and exercises. It should also help distinguish between immediate protective actions and long-term resilience investment.
+
+For human-review flags, this source supports escalation when retrieved evidence involves lifeline sectors, cascading dependencies, safety consequences, or public trust. If a generated answer concerns power, water, hospitals, elections, transportation, communications, or emergency services, the assistant should use cautious language and identify unknowns. The source can also create overlap with CISA, DOE, and IEA documents. If multiple sources mention critical infrastructure but use different sector definitions or national contexts, the assistant should specify jurisdiction rather than merge them incorrectly.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.

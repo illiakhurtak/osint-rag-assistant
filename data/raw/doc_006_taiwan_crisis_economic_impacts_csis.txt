@@ -1,0 +1,22 @@
+TITLE: Scared Strait: Understanding the Economic and Financial Impacts of a Taiwan Crisis
+SOURCE_ORG: CSIS
+URL: https://www.csis.org/analysis/scared-strait-understanding-economic-and-financial-impacts-taiwan-crisis
+TOPIC_CATEGORY: Taiwan Strait tensions and chip manufacturing risk
+SUGGESTED_FILENAME: doc_006_taiwan_crisis_economic_impacts_csis.txt
+
+SUMMARY:
+This CSIS project uses scenario exercises with private-sector participants to explore how firms and financial actors might react to Taiwan Strait shocks. It covers events ranging from accidental incidents to escalation and invasion. Instead of only modeling physical destruction, it asks how companies, investors, insurers, and supply-chain managers might behave under uncertainty. The source is useful because crisis impact is partly psychological and anticipatory: firms may reroute, hoard, pause investment, or reduce exposure before a full conflict. It is a strong source for uncertainty flags because outcomes depend on scenario assumptions, escalation level, and actor behavior. It can be paired with more deterministic chip-supply reports to test nuanced reasoning.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Excellent for testing scenario-based retrieval, uncertainty handling, and confidence calibration. It pushes the assistant to describe assumptions instead of giving a single deterministic Taiwan crisis cost.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used as a scenario and uncertainty document. Its main contribution is not a single forecast but a way to think about economic reactions to Taiwan Strait instability. A Taiwan crisis could include many different events: an accidental collision, limited quarantine, coercive military exercises, cyberattacks, blockade, missile strikes, or full invasion. Each scenario has different implications for shipping, insurance, financial markets, inventories, corporate decision-making, sanctions, export controls, and military response.
+
+A RAG system should learn from this source that private-sector behavior is part of the risk. Firms do not wait for a worst-case invasion before reacting. They may change procurement, pause investment, relocate inventory, increase safety stocks, shift shipping routes, or reduce exposure when they perceive rising risk. Financial institutions may reprice assets, increase hedging, reduce lending, or reassess counterparty exposure. Insurance and shipping actors may impose constraints that amplify disruption even if physical infrastructure is not destroyed.
+
+This source is useful for generating better situational summaries. Instead of saying “a Taiwan crisis would destroy semiconductor supply,” the assistant should specify: the severity depends on the crisis type, duration, damage to ports and fabs, sanctions, shipping access, corporate evacuation plans, export controls, and market psychology. Confidence should be lower for precise numeric estimates and higher for directional statements about disruption risk. Unknowns should include escalation pathways, Beijing’s intent, U.S. and allied response, cyber effects, and whether commercial actors preemptively reroute or suspend activity.
+
+For contradiction testing, pair this document with supply-chain mapping documents. Mapping sources identify dependencies, while scenario sources explain that the same dependency can produce different outcomes depending on behavior and timing. A human-review flag should trigger when the model converts a scenario into a prediction. The correct output should state assumptions and present alternative outcomes, such as limited market shock under a short incident versus severe systemic disruption under blockade or war.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.

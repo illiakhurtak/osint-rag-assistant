@@ -1,0 +1,22 @@
+TITLE: Ukraine’s Energy Security and the Coming Winter
+SOURCE_ORG: International Energy Agency
+URL: https://www.iea.org/reports/ukraines-energy-security-and-the-coming-winter
+TOPIC_CATEGORY: Energy infrastructure disruption risks / Ukraine war
+SUGGESTED_FILENAME: doc_011_ukraine_energy_security_iea.txt
+
+SUMMARY:
+This IEA report lays out an energy action plan for Ukraine and partners after repeated Russian attacks on energy infrastructure. It explains that energy security is central to Ukraine’s broader security because power, heating, communications, water, and industrial functions rely on electricity and fuel systems. The report identifies key winter risks and recommends urgent actions. It is useful because it connects kinetic attacks, infrastructure resilience, humanitarian impacts, and partner support. The source is licensed CC BY 4.0, making it especially suitable for lawful reuse in a demo corpus. It can be paired with decentralized-energy sources to compare centralized repair versus distributed resilience. It is also relevant for warning generation and human-review flags.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Strong source for energy-disruption risk summaries with confidence, unknowns, and actionable mitigation categories.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be ingested as an energy security and wartime resilience report. Its key point is that attacks on energy infrastructure are not only an electricity-sector problem. Power supply supports heating, communications, water systems, hospitals, industry, and military logistics. In Ukraine, repeated attacks on generation, transmission, substations, district heating, and fuel infrastructure create a systemic risk that becomes more acute during winter.
+
+The report is useful for a situational-awareness assistant because it frames risk in terms of capacity, seasonality, repair timelines, and partner action. A winter forecast should consider generation availability, grid damage, fuel stocks, import capacity, air-defense coverage, repair equipment, workforce constraints, and demand under cold-weather conditions. A generic statement that “Russia attacked the grid” is not enough. The assistant should identify which assets are affected and how the disruption may cascade into civilian life and economic activity.
+
+The source supports confidence-scored summaries. The assistant can have high confidence that Ukraine’s energy system has been repeatedly targeted and that winter increases vulnerability. It should have lower confidence about exact outage severity without current operational data. Unknowns include the scale of future attacks, weather severity, repair speed, availability of spare transformers and turbines, and the effectiveness of air defenses.
+
+This report is also useful for generating human-review flags. If retrieved evidence indicates possible disruption to heating, hospitals, nuclear safety, or large civilian populations, a human analyst should review the answer before operational use. If the assistant suggests mitigation, it should distinguish between immediate measures such as repair equipment, fuel supply, and emergency generators, and longer-term measures such as decentralization, grid hardening, and distributed energy resources. Pairing this source with the IEA decentralized energy report helps the model compare short-term winter survival with long-term resilience transformation.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.

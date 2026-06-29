@@ -1,0 +1,18 @@
+TITLE: Emerging Resilience in the Semiconductor Supply Chain
+SOURCE_ORG: Semiconductor Industry Association and Boston Consulting Group
+URL: https://www.semiconductors.org/emerging-resilience-in-the-semiconductor-supply-chain/
+TOPIC_CATEGORY: Semiconductor supply chain / resilience / industrial policy
+SUGGESTED_FILENAME: doc_050_sia_bcg_emerging_resilience_semiconductor_supply_chain.txt
+
+SUMMARY:
+The SIA/BCG emerging resilience report assesses how new investments, industrial policy, and geographic diversification are changing the semiconductor supply chain. It is relevant because earlier reports emphasized deep concentration, while newer material may show partial resilience gains and continuing chokepoints. The source helps a RAG assistant avoid stale assumptions about fab geography, advanced packaging, equipment, materials, and supply-chain incentives. It should be paired with CSET and CSIS baseline documents.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for testing whether the RAG assistant handles changing semiconductor resilience claims over time.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used to update older semiconductor concentration analysis. A RAG assistant should explain that resilience can improve in some segments while risks remain in others. New fabs do not automatically solve equipment, materials, workforce, EDA, packaging, or leading-edge node dependencies.
+The report is useful for comparing policy effects. CHIPS-style incentives, private investment, allied coordination, and customer diversification may reduce some concentration risks, but they also take years to affect production.
+For contradiction testing, pair this source with older CSET and SIA/BCG reports. If sources disagree, the assistant should preserve publication dates and explain whether the difference reflects changed conditions or different methodology.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

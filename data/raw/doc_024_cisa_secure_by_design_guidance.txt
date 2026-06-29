@@ -1,0 +1,18 @@
+TITLE: Secure by Design Guidance and the Shift of Cyber Risk Toward Technology Producers
+SOURCE_ORG: CISA and international partners
+URL: https://www.cisa.gov/securebydesign
+TOPIC_CATEGORY: Cybersecurity / software security / technology policy
+SUGGESTED_FILENAME: doc_024_cisa_secure_by_design_guidance.txt
+
+SUMMARY:
+CISA Secure by Design guidance argues that technology manufacturers should build products that are secure by default and reduce the burden on customers. It is relevant to RAG because it changes the framing of cyber risk from user misconfiguration alone to producer responsibility, default settings, patchability, logging, and product security outcomes. The source helps the assistant answer policy and procurement questions about vendor accountability, secure defaults, and software supply-chain incentives.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for balancing incident-focused cyber retrieval with product-security and procurement accountability.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when cyber risk is caused or amplified by insecure product defaults, weak logging, poor patch processes, or risky authentication designs. A RAG assistant should avoid blaming end users for every breach when the evidence points to insecure product architecture or poor default configuration.
+The guidance is especially relevant for procurement and critical infrastructure. Buyers can ask vendors about secure defaults, vulnerability disclosure, memory-safe languages, logging, patch transparency, and end-of-life policies. The document also helps distinguish short-term hardening from long-term market incentives.
+For contradiction testing, pair this source with vulnerability catalogs and incident reports. KEV may show what is being exploited; Secure by Design explains why recurring classes of exploitation persist. Human review should trigger when the answer could affect procurement decisions for critical services or when it evaluates vendor responsibility.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

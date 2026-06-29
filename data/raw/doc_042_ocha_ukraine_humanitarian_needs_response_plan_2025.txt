@@ -1,0 +1,18 @@
+TITLE: Ukraine Humanitarian Needs and Response Plan 2025
+SOURCE_ORG: OCHA
+URL: https://reliefweb.int/report/ukraine/ukraine-humanitarian-needs-and-response-plan-2025-december-2024-enuk
+TOPIC_CATEGORY: Ukraine / humanitarian response / civilian impact
+SUGGESTED_FILENAME: doc_042_ocha_ukraine_humanitarian_needs_response_plan_2025.txt
+
+SUMMARY:
+The Ukraine Humanitarian Needs and Response Plan 2025 describes humanitarian conditions, priority needs, affected populations, and planned response activities. It is relevant because OSINT systems often retrieve conflict data but need humanitarian context to explain civilian consequences. The source helps the assistant identify needs in shelter, health, protection, water, education, food security, and winterization. It should be paired with conflict-event and infrastructure sources so the assistant does not reduce war impact to battlefield movements alone.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful humanitarian source for civilian-impact questions and safety-sensitive answer generation.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a query involves civilians, displacement, winter needs, essential services, or humanitarian access. A RAG assistant should distinguish humanitarian needs from military developments and should use careful language around affected populations.
+The plan is valuable for categorizing response sectors. Shelter, protection, health, water and sanitation, education, food security, cash assistance, and winter support can be extracted as separate needs. The assistant should preserve dates and planning assumptions because humanitarian figures can change quickly.
+For contradiction testing, pair this source with ACLED, ISW, IEA, and World Bank documents. Human review should trigger for casualty estimates, aid routing, evacuation, or operational humanitarian advice.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

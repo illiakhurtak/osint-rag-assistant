@@ -1,0 +1,18 @@
+TITLE: DOE Critical Materials Assessment for Energy Supply Chains
+SOURCE_ORG: U.S. Department of Energy
+URL: https://www.energy.gov/cmm/critical-materials-assessment
+TOPIC_CATEGORY: Critical materials / energy technology / industrial policy
+SUGGESTED_FILENAME: doc_035_doe_critical_materials_assessment_2023.txt
+
+SUMMARY:
+DOE Critical Materials Assessment evaluates materials that are important to clean energy technologies and vulnerable to supply risk. It is relevant because energy resilience, semiconductor manufacturing, advanced batteries, magnets, and defense-adjacent systems share upstream material dependencies. The source helps a RAG assistant distinguish criticality from scarcity: a material becomes critical when both importance and supply risk are high. It can be paired with IEA and USGS sources for a fuller view of demand, production, and policy response.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for explaining why material criticality is a risk framework rather than a simple list.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used to define material criticality. A material can be abundant in the earth but still critical if processing is concentrated, substitution is difficult, demand is rising, or supply disruption would affect essential technologies. A RAG assistant should state the criteria instead of only listing minerals.
+The assessment is valuable for connecting clean energy, industrial base, and technology competition. Batteries, electric motors, grid equipment, solar components, and power electronics all depend on specialized inputs. Some risks can be reduced through recycling, substitution, domestic production, stockpiling, or allied sourcing, but each mitigation has cost and time limits.
+For contradiction testing, pair DOE with IEA and USGS. If sources disagree on criticality, the assistant should explain that different methodologies, time horizons, and technology assumptions can produce different rankings.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

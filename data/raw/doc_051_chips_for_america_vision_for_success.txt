@@ -1,0 +1,18 @@
+TITLE: CHIPS for America Vision for Success and U.S. Semiconductor Industrial Policy
+SOURCE_ORG: CHIPS for America / NIST
+URL: https://www.nist.gov/chips/chips-america-vision-success
+TOPIC_CATEGORY: Semiconductor policy / industrial strategy / U.S. manufacturing
+SUGGESTED_FILENAME: doc_051_chips_for_america_vision_for_success.txt
+
+SUMMARY:
+CHIPS for America Vision for Success describes U.S. goals for strengthening semiconductor manufacturing, research, workforce, supply-chain resilience, and national security. It is relevant because a RAG assistant should distinguish industrial-policy ambition from actual capacity available today. The source helps answer questions about domestic fabs, advanced packaging, R&D infrastructure, workforce, incentives, and secure supply. It pairs well with SIA, CSET, BIS, and CSIS sources.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful official source for U.S. semiconductor policy goals and implementation vocabulary.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when the query asks what U.S. semiconductor policy is trying to accomplish. A RAG assistant should identify the difference between awards, construction, production ramp, workforce training, and resilient supply. Announced investments are not the same as operating capacity.
+The document supports entity extraction for fabs, research centers, advanced packaging, workforce, supply-chain resilience, and national security. It is useful for distinguishing manufacturing incentives from export controls. Both affect chip competition, but through different mechanisms.
+For contradiction testing, pair CHIPS policy with industry resilience reports and export-control analysis. Human review should trigger for investment advice, export compliance, or current company-specific subsidy claims.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

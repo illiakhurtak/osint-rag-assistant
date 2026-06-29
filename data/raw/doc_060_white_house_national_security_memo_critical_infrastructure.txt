@@ -1,0 +1,18 @@
+TITLE: National Security Memorandum on Critical Infrastructure Security and Resilience
+SOURCE_ORG: The White House
+URL: https://www.whitehouse.gov/briefing-room/presidential-actions/2024/04/30/national-security-memorandum-on-critical-infrastructure-security-and-resilience/
+TOPIC_CATEGORY: Critical infrastructure / national policy / resilience governance
+SUGGESTED_FILENAME: doc_060_white_house_national_security_memo_critical_infrastructure.txt
+
+SUMMARY:
+The National Security Memorandum on Critical Infrastructure Security and Resilience updates U.S. policy for protecting and strengthening critical infrastructure against cyber, physical, natural, and geopolitical risks. It is relevant because it provides top-level governance framing for sector risk, federal coordination, public-private partnership, and resilience outcomes. The source helps a RAG assistant connect CISA guidance, sector agencies, owners and operators, and national-security priorities. It pairs with DHS/CISA sector and planning documents.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful policy source for critical-infrastructure governance and cross-sector resilience questions.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a query asks how the U.S. government frames critical-infrastructure security at the national level. A RAG assistant should identify the roles of federal coordination, sector agencies, owners and operators, public-private partnership, and resilience planning.
+The memorandum is useful for connecting cyber, physical, climate, supply-chain, and geopolitical risk. Critical infrastructure protection is not only a technical cyber problem; it also involves continuity of essential services and national preparedness.
+For contradiction testing, pair this source with CISA SRMA material, NIST CSF, and infrastructure planning guidance. Human review should trigger for public-safety, legal, or operational-security implications.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

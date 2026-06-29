@@ -1,0 +1,18 @@
+TITLE: Facts Not Fakes and Whole-of-Society Resilience to Disinformation
+SOURCE_ORG: OECD
+URL: https://www.oecd.org/en/publications/facts-not-fakes_1f86d19d-en.html
+TOPIC_CATEGORY: Disinformation / public communication / democratic resilience
+SUGGESTED_FILENAME: doc_055_oecd_facts_not_fakes.txt
+
+SUMMARY:
+OECD Facts Not Fakes examines how governments and societies can strengthen resilience to misinformation and disinformation through transparency, media literacy, public communication, platform cooperation, and evidence-based policy. It is relevant because a RAG assistant should not respond to contested narratives by simply adding more content. The source helps the assistant emphasize provenance, trust, uncertainty, and proportional response. It pairs well with the OECD good-practice principles already in the corpus.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for answer style, evidence grading, and avoiding amplification of false or harmful narratives.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used to shape safe public-interest communication. A RAG assistant should explain what is known, what is unknown, and what evidence would increase confidence. It should avoid presenting unverified claims as facts or repeating manipulative narratives unnecessarily.
+The report is useful for distinguishing response types. Fact-checking, prebunking, media literacy, transparency, platform cooperation, and institutional communication each address different failure modes. The assistant should not treat counter-disinformation as censorship by default.
+For contradiction testing, pair this source with threat-focused FIMI reports. Human review should trigger for elections, public health, conflict, identity-based harm, or requests for persuasive messaging.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

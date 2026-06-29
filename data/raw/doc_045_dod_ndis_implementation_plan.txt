@@ -1,0 +1,18 @@
+TITLE: National Defense Industrial Strategy Implementation Plan
+SOURCE_ORG: U.S. Department of Defense
+URL: https://www.businessdefense.gov/NDIS.html
+TOPIC_CATEGORY: Defense industrial base / U.S. policy / implementation
+SUGGESTED_FILENAME: doc_045_dod_ndis_implementation_plan.txt
+
+SUMMARY:
+The National Defense Industrial Strategy Implementation Plan turns broad defense industrial strategy into lines of effort, actions, and performance concepts. It is relevant to RAG because strategy documents can sound aspirational unless the assistant can retrieve implementation mechanisms. The source supports questions about resilient supply chains, workforce development, flexible acquisition, economic deterrence, and industrial capacity. It should be compared with GAO and RAND sources to test the gap between policy intent and execution risk.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful official source for U.S. defense-industrial policy implementation details.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a query asks how U.S. defense-industrial strategy is supposed to become action. A RAG assistant should distinguish goals, implementation steps, metrics, and funding authorities. Strategy language alone does not prove capability has improved.
+The plan is useful for extracting policy levers: acquisition reform, supply-chain visibility, workforce programs, industrial-base investment, ally and partner cooperation, and demand signaling. These levers can be compared with observed bottlenecks in munitions, shipbuilding, microelectronics, and critical materials.
+For contradiction testing, pair this source with GAO oversight and RAND analysis. Human review should trigger for procurement decisions, classified capability questions, or claims about readiness for a specific conflict scenario.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

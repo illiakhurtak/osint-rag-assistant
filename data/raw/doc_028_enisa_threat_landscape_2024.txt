@@ -1,0 +1,18 @@
+TITLE: ENISA Threat Landscape 2024 for European Cyber Risk Trends
+SOURCE_ORG: ENISA
+URL: https://www.enisa.europa.eu/publications/enisa-threat-landscape-2024
+TOPIC_CATEGORY: Cybersecurity / Europe / threat landscape
+SUGGESTED_FILENAME: doc_028_enisa_threat_landscape_2024.txt
+
+SUMMARY:
+ENISA Threat Landscape 2024 summarizes major cyber threats affecting the European Union, including ransomware, malware, social engineering, threats to data, denial of service, supply-chain attacks, and information manipulation. It is useful for RAG because it provides a regional threat taxonomy and trend framing rather than a single incident. The source helps the assistant compare government, vendor, and regional assessments. It also supports retrieval for European critical infrastructure, hybrid threats, and resilience planning.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Good taxonomy source for trend-level cyber answers and EU-centered threat comparisons.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This report should be treated as a trend and taxonomy source. A RAG assistant can use it to classify threats by type, affected sector, motivation, and regional relevance. It is especially useful when a query asks what threats matter most rather than asking about a specific CVE or incident.
+The report helps prevent overfitting to one vendor dataset. Vendor reports may have telemetry bias, while public-sector landscape reports may emphasize policy relevance and cross-sector consequences. The assistant should describe these differences when comparing sources.
+For contradiction testing, pair ENISA with Microsoft, CrowdStrike, CISA, and NIST documents. Human review should trigger when trend data is used to advise a specific operator, because landscape-level evidence does not replace local risk assessment.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

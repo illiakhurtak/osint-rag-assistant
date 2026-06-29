@@ -1,0 +1,18 @@
+TITLE: IMO Red Sea Maritime Security Context for Commercial Shipping Risk
+SOURCE_ORG: International Maritime Organization
+URL: https://www.imo.org/en/MediaCentre/HotTopics/Pages/Red-Sea.aspx
+TOPIC_CATEGORY: Maritime security / Red Sea / shipping risk
+SUGGESTED_FILENAME: doc_038_imo_red_sea_maritime_security.txt
+
+SUMMARY:
+IMO Red Sea material provides official maritime-security context around threats to commercial shipping and the safety of seafarers. It is useful because a RAG assistant should distinguish economic disruption from human safety, flag-state responsibilities, naval security operations, and international maritime governance. The source helps identify actors, affected waterways, vessel risk, and the difference between route diversion and incident response. It can be paired with UNCTAD and World Bank economic analysis.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful safety and governance source for Red Sea shipping questions.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when the query involves maritime safety, seafarer risk, or international shipping governance. A RAG assistant should separate the economic effects of disruption from the operational safety of vessels and crews.
+The document is useful for source balancing. UNCTAD may emphasize trade and freight rates; IMO emphasizes maritime safety, international coordination, and the protection of shipping. Both are relevant but answer different parts of the problem.
+For contradiction testing, pair IMO with UNCTAD and World Bank sources. Human review should trigger for current routing, vessel safety, or any query that could be interpreted as operational maritime guidance.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

@@ -1,0 +1,18 @@
+TITLE: Global Critical Minerals Outlook 2025 and Energy-Technology Supply Risk
+SOURCE_ORG: International Energy Agency
+URL: https://www.iea.org/reports/global-critical-minerals-outlook-2025
+TOPIC_CATEGORY: Critical minerals / energy security / supply chains
+SUGGESTED_FILENAME: doc_033_iea_global_critical_minerals_outlook_2025.txt
+
+SUMMARY:
+IEA Global Critical Minerals Outlook 2025 examines mineral supply, demand, concentration, investment, recycling, and processing for energy technologies. It is relevant because semiconductors, batteries, grids, electric vehicles, defense systems, and renewable energy all depend on specialized materials. The source helps a RAG assistant connect upstream minerals to downstream technology resilience. It is useful for distinguishing mining concentration, refining concentration, geopolitical exposure, price volatility, and substitution limits.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful upstream complement to semiconductor and defense supply-chain documents.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when technology risk depends on minerals rather than finished products alone. A RAG assistant should distinguish where concentration occurs: extraction, processing, refining, component manufacturing, or final assembly. A country may mine a mineral but depend on another country for processing.
+The report is useful for linking energy transition, industrial policy, and national security. Lithium, nickel, cobalt, graphite, rare earth elements, copper, and other materials affect batteries, motors, grid equipment, electronics, and defense-adjacent systems. Supply disruption can arise from geopolitics, permitting delays, underinvestment, environmental constraints, or export controls.
+For contradiction testing, pair this source with USGS summaries, DOE assessments, and semiconductor material-risk reports. Human review should trigger for investment, procurement, or sanctions-sensitive conclusions.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

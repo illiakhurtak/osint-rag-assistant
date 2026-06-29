@@ -1,0 +1,18 @@
+TITLE: AI Chips, Compute Infrastructure, and Export-Control Leverage
+SOURCE_ORG: CSET, Georgetown University
+URL: https://cset.georgetown.edu/publication/ai-chips-what-they-are-and-why-they-matter/
+TOPIC_CATEGORY: AI chips / compute / export controls
+SUGGESTED_FILENAME: doc_052_cset_ai_chips_export_controls.txt
+
+SUMMARY:
+CSET analysis of AI chips explains why specialized accelerators, advanced nodes, memory bandwidth, interconnects, and data-center infrastructure matter for frontier AI capabilities. It is relevant because policy debates often collapse AI capability into abstract algorithms while ignoring compute supply chains. The source helps the assistant explain why advanced chips, manufacturing equipment, cloud access, and model training capacity are strategically important. It pairs with BIS export-control documents and semiconductor supply-chain baselines.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful bridge between AI governance, semiconductor chokepoints, and national-security technology policy.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a user asks why chips matter for AI. A RAG assistant should connect model training and inference to accelerators, memory, networking, software stacks, power, cooling, and data centers. The chip alone is not the entire compute system, but it is a central bottleneck.
+The document is useful for distinguishing technical terms. GPUs, AI accelerators, advanced-node logic, high-bandwidth memory, EDA, lithography, packaging, and cloud compute should be extracted as separate concepts.
+For contradiction testing, pair this source with BIS controls and NIST AI risk guidance. Human review should trigger for export compliance, model capability claims, or sensitive compute procurement questions.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

@@ -1,0 +1,18 @@
+TITLE: Ukraine Rapid Damage and Needs Assessment RDNA4
+SOURCE_ORG: World Bank, Government of Ukraine, European Commission, United Nations
+URL: https://www.worldbank.org/en/news/press-release/2025/02/25/updated-ukraine-recovery-and-reconstruction-needs-assessment-released
+TOPIC_CATEGORY: Ukraine / reconstruction / infrastructure damage
+SUGGESTED_FILENAME: doc_041_world_bank_ukraine_rdna4.txt
+
+SUMMARY:
+Ukraine RDNA4 estimates war-related damage, losses, and recovery and reconstruction needs across sectors. It is highly relevant to a RAG demo because it connects conflict events to infrastructure, housing, energy, transport, agriculture, education, health, and public-sector needs. The source helps distinguish damage, loss, and needs, which are often conflated in public discussion. It also supports human-review flags for high-stakes claims about reconstruction cost, civilian impact, and infrastructure priorities.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Strong structured source for Ukraine reconstruction, sector damage, and recovery-priority retrieval.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used to answer reconstruction and damage-assessment questions. A RAG assistant should distinguish physical damage from economic losses and from recovery or reconstruction needs. These are related but not interchangeable measures.
+The report is useful for sector extraction. Energy, housing, transport, social infrastructure, agriculture, water, health, and education can be compared by estimated need and urgency. The assistant should also preserve the assessment date because estimates change as the war continues.
+For contradiction testing, pair RDNA4 with IEA energy reports, OCHA humanitarian plans, and conflict-event monitors. Human review should trigger for casualty claims, reconstruction financing, procurement, or active-war operational questions.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

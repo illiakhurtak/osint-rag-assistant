@@ -1,0 +1,18 @@
+TITLE: BIS Advanced Computing and Semiconductor Manufacturing Export Controls
+SOURCE_ORG: U.S. Bureau of Industry and Security
+URL: https://www.bis.gov/advanced-computing-and-semiconductor-manufacturing-items-controls-china
+TOPIC_CATEGORY: Export controls / semiconductors / China technology competition
+SUGGESTED_FILENAME: doc_049_bis_advanced_computing_semiconductor_controls.txt
+
+SUMMARY:
+BIS advanced computing and semiconductor manufacturing controls restrict certain exports, reexports, transfers, and activities related to advanced chips, semiconductor manufacturing equipment, and supercomputing end uses. This source is relevant because RAG systems must distinguish policy intent, controlled items, destinations, end users, foreign direct product rules, and licensing requirements. It pairs with CSIS and CSET analysis to test whether the assistant separates official rules from commentary.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful primary source for semiconductor export-control questions and sanctions-sensitive retrieval.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used as a primary reference for U.S. export-control policy on advanced computing and semiconductor manufacturing items. A RAG assistant should distinguish official rule scope from think-tank interpretation. It should not give compliance advice beyond high-level explanation.
+The document is useful for entity extraction: advanced computing chips, semiconductor manufacturing equipment, end users, destinations, license exceptions, controlled technology, and supercomputing. It also supports temporal reasoning because rules have been updated repeatedly.
+For contradiction testing, pair BIS with CSIS commentary and allied export-control authority reports. Human review should trigger for compliance, transaction screening, specific company questions, or sanctions-sensitive advice.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

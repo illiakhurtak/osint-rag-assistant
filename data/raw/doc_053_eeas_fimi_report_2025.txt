@@ -1,0 +1,18 @@
+TITLE: EEAS Report on Foreign Information Manipulation and Interference
+SOURCE_ORG: European External Action Service
+URL: https://www.eeas.europa.eu/eeas/3rd-eeas-report-foreign-information-manipulation-and-interference-threats_en
+TOPIC_CATEGORY: Information operations / FIMI / disinformation
+SUGGESTED_FILENAME: doc_053_eeas_fimi_report_2025.txt
+
+SUMMARY:
+The EEAS report on Foreign Information Manipulation and Interference analyzes tactics, techniques, procedures, narratives, actor behavior, and response frameworks related to hostile information activity. It is relevant because a RAG assistant must distinguish content narratives from infrastructure, coordination, impersonation, amplification, and cross-platform behavior. The source helps classify FIMI incidents without treating every false claim as the same kind of operation. It pairs well with OECD communication principles and Microsoft threat reporting.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful taxonomy source for foreign information manipulation and interference analysis.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when the query involves information operations, influence campaigns, or manipulated narratives. A RAG assistant should distinguish misinformation from coordinated foreign interference and should describe tactics only as far as needed for analysis.
+The report supports extraction of actor, target audience, narrative, channel, tactic, behavior, and objective. It is useful for avoiding over-amplification: the assistant can summarize the manipulative pattern without repeating harmful claims unnecessarily.
+For contradiction testing, pair EEAS with OECD guidance and vendor threat intelligence. Human review should trigger for elections, public health, identity-based harm, active conflict, or persuasive political content.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

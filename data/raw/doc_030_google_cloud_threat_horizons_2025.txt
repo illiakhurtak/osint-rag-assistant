@@ -1,0 +1,18 @@
+TITLE: Google Cloud Threat Horizons and Cloud-Centric Threat Intelligence
+SOURCE_ORG: Google Cloud
+URL: https://cloud.google.com/security/resources/threat-horizons
+TOPIC_CATEGORY: Cybersecurity / cloud security / threat intelligence
+SUGGESTED_FILENAME: doc_030_google_cloud_threat_horizons_2025.txt
+
+SUMMARY:
+Google Cloud Threat Horizons reports provide cloud-focused threat intelligence, including credential abuse, misconfiguration, exposed services, cryptomining, phishing, and attacker behavior in cloud environments. This source is useful for a RAG demo because cloud risk often differs from traditional perimeter risk. It helps the assistant reason about identity, API keys, service accounts, logging, IAM permissions, and cloud workload exposure. It can be compared with CISA and NIST sources to test whether the assistant maps cloud-specific evidence to general risk frameworks.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for retrieval about cloud intrusion paths, identity misuse, and misconfiguration-driven risk.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when the query involves cloud platforms, exposed credentials, service accounts, or misconfigured workloads. A RAG assistant should avoid assuming that every compromise involves malware installed on a local endpoint. In cloud environments, attackers often abuse valid credentials, overly broad permissions, public buckets, weak keys, or exposed management interfaces.
+The document is valuable for mapping cloud evidence to controls. Logging, identity governance, least privilege, secrets management, network exposure review, and incident response playbooks are key retrieval concepts. The assistant should distinguish a compromised identity from a vulnerable product and an exposed resource from an exploited one.
+For contradiction testing, pair cloud threat reporting with NIST CSF and CISA CPGs. Human review should trigger for live cloud incident response, credential exposure, or public claims about named organizations.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

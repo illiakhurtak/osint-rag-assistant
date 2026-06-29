@@ -1,0 +1,18 @@
+TITLE: Sector Risk Management Agencies and Critical-Infrastructure Responsibilities
+SOURCE_ORG: CISA
+URL: https://www.cisa.gov/resources-tools/resources/sector-risk-management-agencies
+TOPIC_CATEGORY: Critical infrastructure / governance / sector risk
+SUGGESTED_FILENAME: doc_057_cisa_sector_risk_management_agencies.txt
+
+SUMMARY:
+CISA material on Sector Risk Management Agencies explains how U.S. critical-infrastructure sectors are coordinated across lead federal agencies and sector partners. It is relevant because RAG answers about infrastructure risk need to identify which sector is affected and who has coordination responsibility. The source helps classify energy, water, transportation, communications, health care, financial services, food and agriculture, and other sectors. It pairs with NIST and CISA cyber sources for governance-level reasoning.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful metadata source for sector classification and responsibility mapping in critical infrastructure.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a query mentions critical infrastructure but not a specific sector. A RAG assistant should identify the sector and explain that risk management responsibilities vary across sectors and agencies.
+The document is useful for metadata normalization. Energy, water, transport, communications, emergency services, financial services, health care, food and agriculture, and government facilities have different dependencies and regulatory contexts.
+For contradiction testing, pair this source with incident-specific advisories. A cyber advisory may describe a threat, while SRMA material explains governance and coordination context. Human review should trigger for active incidents or public-safety infrastructure.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

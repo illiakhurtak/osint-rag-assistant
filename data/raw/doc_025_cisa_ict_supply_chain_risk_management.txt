@@ -1,0 +1,18 @@
+TITLE: ICT Supply Chain Risk Management Essentials for Technology Dependency Analysis
+SOURCE_ORG: CISA
+URL: https://www.cisa.gov/resources-tools/resources/ict-supply-chain-risk-management-task-force-resources
+TOPIC_CATEGORY: Supply chain security / ICT / critical infrastructure
+SUGGESTED_FILENAME: doc_025_cisa_ict_supply_chain_risk_management.txt
+
+SUMMARY:
+CISA ICT Supply Chain Risk Management resources help organizations identify, assess, and manage risks that arise from technology suppliers, service providers, software, hardware, and outsourced operations. This source is relevant to an OSINT RAG demo because many geopolitical risks move through vendor relationships rather than direct attacks. It supports extraction of supplier, product, service, country, dependency, and mitigation fields. It also links cyber risk to procurement and business continuity.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for supplier-dependency questions that sit between cybersecurity, procurement, and geopolitical risk.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used to reason about technology dependency. A RAG assistant should identify whether risk comes from a hardware component, software library, managed service provider, cloud dependency, or maintenance relationship. It should also separate supplier concentration from supplier compromise.
+The document is valuable for modeling risk paths. A foreign supplier may create exposure through legal jurisdiction, update mechanisms, remote access, component substitution, counterfeit parts, or lack of transparency. Not every dependency is malicious or unacceptable, but each dependency can affect resilience and visibility.
+For contradiction testing, pair this source with GAO defense supplier reports and CISA vulnerability advisories. The assistant should surface unknowns when supply-chain visibility is incomplete. Human review should trigger for sanctions, export controls, defense procurement, or active vendor-compromise allegations.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

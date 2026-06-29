@@ -1,0 +1,18 @@
+TITLE: Microsoft Digital Defense Report 2025 and Platform-Scale Threat Telemetry
+SOURCE_ORG: Microsoft
+URL: https://www.microsoft.com/en-us/security/security-insider/microsoft-digital-defense-report-2025
+TOPIC_CATEGORY: Cybersecurity / threat intelligence / platform telemetry
+SUGGESTED_FILENAME: doc_029_microsoft_digital_defense_report_2025.txt
+
+SUMMARY:
+Microsoft Digital Defense Report 2025 provides threat intelligence based on large-scale platform telemetry, including identity attacks, ransomware, nation-state activity, cybercrime, and influence operations. It is useful for RAG because it introduces a vendor-telemetry perspective that can complement official government advisories. The source helps the assistant identify tradecraft, target sectors, authentication risk, and the relationship between cyber operations and information operations. It should be used with awareness of vendor scope and possible telemetry bias.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for comparing government advisories with commercial threat intelligence at large scale.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used as a platform-telemetry view of the threat environment. Microsoft observes identity, cloud, endpoint, and productivity ecosystem activity at scale, which can reveal patterns that are not visible in a single incident report. A RAG assistant should explain that such telemetry is powerful but not universal.
+The report is valuable for linking identity security, ransomware, nation-state intrusion, and influence operations. It can help answer why multifactor authentication, conditional access, patching, and user training remain central even when the threat actor is sophisticated.
+For contradiction testing, pair this source with CISA, ENISA, and OECD documents. Vendor intelligence may be more operationally detailed, while public-sector reports may be more policy-oriented. Human review is appropriate for attribution, active incidents, or recommendations that would affect live security operations.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

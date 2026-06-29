@@ -1,0 +1,18 @@
+TITLE: Shields Up Guidance for Heightened Cybersecurity Posture
+SOURCE_ORG: CISA
+URL: https://www.cisa.gov/shields-up
+TOPIC_CATEGORY: Cybersecurity / geopolitical risk / preparedness
+SUGGESTED_FILENAME: doc_059_cisa_shields_up_cybersecurity_guidance.txt
+
+SUMMARY:
+CISA Shields Up guidance gives organizations practical steps to reduce the likelihood and impact of damaging cyber intrusions during periods of heightened geopolitical risk. It is relevant because the Russia-Ukraine war and related tensions increased concern about spillover cyber activity. The source helps a RAG assistant connect strategic warning to concrete preparedness actions such as patching, MFA, backups, incident plans, reporting, and leadership coordination. It pairs with Russian cyber threat advisories and NIST CSF.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for preparedness answers that connect geopolitical tension with practical cyber hygiene.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used when a user asks what organizations should do during elevated cyber risk. A RAG assistant should present high-level preparedness actions and avoid pretending to diagnose a live network.
+The guidance is useful for role-based extraction. Senior leaders, IT teams, incident responders, and business continuity planners may need different actions. It also supports communication around reporting suspicious activity and reducing impact.
+For contradiction testing, pair Shields Up with CISA Russian-threat advisories and NIST CSF. Human review should trigger for live incident response, specific network configurations, or public-safety services.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

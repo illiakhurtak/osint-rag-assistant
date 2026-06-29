@@ -1,0 +1,18 @@
+TITLE: Review of Maritime Transport 2024 and Global Shipping Resilience
+SOURCE_ORG: UNCTAD
+URL: https://unctad.org/publication/review-maritime-transport-2024
+TOPIC_CATEGORY: Maritime trade / supply chains / chokepoints
+SUGGESTED_FILENAME: doc_036_unctad_review_maritime_transport_2024.txt
+
+SUMMARY:
+UNCTAD Review of Maritime Transport 2024 analyzes global shipping, port performance, freight markets, emissions, resilience, and route disruptions. It is relevant to an OSINT RAG demo because maritime shocks can cascade into energy, food, manufacturing, and consumer goods supply chains. The source helps the assistant answer questions about chokepoints, route diversion, freight rates, insurance, emissions, and developing-country exposure. It can be paired with Red Sea and Panama Canal documents for scenario comparison.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful macro source for maritime logistics, trade disruption, and supply-chain consequences.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be treated as a broad shipping baseline. A RAG assistant should use it to explain that maritime disruption is not only a local security issue. Rerouting vessels can lengthen voyages, increase fuel use, raise freight rates, reduce schedule reliability, and create port congestion.
+The report is useful for entity extraction across ports, canals, vessel classes, freight markets, commodities, and affected regions. It also supports causal reasoning: drought in one canal, conflict near another chokepoint, and port congestion can interact rather than produce isolated effects.
+For contradiction testing, pair this source with shorter UNCTAD articles and World Bank analysis. Human review should trigger for active maritime security, sanctions, insurance, or emergency logistics decisions.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

@@ -1,0 +1,18 @@
+TITLE: ISW Russian Offensive Campaign Assessments as Daily Conflict Analysis
+SOURCE_ORG: Institute for the Study of War
+URL: https://www.understandingwar.org/backgrounder/ukraine-conflict-updates
+TOPIC_CATEGORY: Ukraine / military analysis / conflict monitoring
+SUGGESTED_FILENAME: doc_043_isw_russian_offensive_campaign_assessments.txt
+
+SUMMARY:
+ISW Russian Offensive Campaign Assessments provide recurring open-source analysis of the war in Ukraine, including frontline developments, Russian and Ukrainian operations, force generation, information operations, and political-military context. The source is relevant to RAG because it gives narrative analysis with frequent updates rather than a static report. It should be used carefully: daily assessments are time-sensitive and may be revised as more evidence emerges. It pairs well with ACLED event data, OCHA humanitarian reporting, and IEA energy analysis.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for testing temporal retrieval, source recency, and distinction between analysis and confirmed facts.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source should be used for conflict-analysis queries that require context, not just event counts. A RAG assistant should preserve the publication date of each assessment and avoid treating an older daily update as current battlefield status.
+The source helps identify military entities, locations, claimed advances, operational directions, mobilization issues, and information operations. The assistant should label claims and assessments separately, especially when battlefield reporting is contested.
+For contradiction testing, pair ISW with ACLED and official statements. Human review should trigger for live operational questions, casualty estimates, targeting, or any request that could affect people in active conflict zones.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

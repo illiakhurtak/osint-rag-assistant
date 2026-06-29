@@ -1,0 +1,18 @@
+TITLE: Cross-Sector Cybersecurity Performance Goals for Baseline Defense
+SOURCE_ORG: CISA
+URL: https://www.cisa.gov/cross-sector-cybersecurity-performance-goals
+TOPIC_CATEGORY: Cybersecurity / critical infrastructure / baseline controls
+SUGGESTED_FILENAME: doc_022_cisa_cross_sector_cybersecurity_performance_goals.txt
+
+SUMMARY:
+CISA Cross-Sector Cybersecurity Performance Goals describe practical baseline cyber outcomes for critical-infrastructure owners and operators. They are useful for translating broad frameworks into concrete practices such as asset inventory, vulnerability remediation, multifactor authentication, logging, incident planning, backups, and vendor risk management. This source is relevant because many OSINT cyber documents identify threats without explaining which controls would reduce exposure. It also supports comparison between sector-specific risks and cross-sector minimum expectations.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for answering mitigation questions after retrieving threat, vulnerability, or incident evidence.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source is a mitigation-oriented companion to threat reporting. A RAG assistant should use it when a user asks what critical-infrastructure operators should prioritize after learning about ransomware, state-sponsored intrusion, exposed remote access, or vulnerable edge devices. The goals are not a full compliance standard; they are a baseline set of outcomes designed to be understandable across sectors.
+The source helps classify defensive actions. Identity hardening, software update management, network segmentation, logging, incident response exercises, data backups, and third-party risk controls should not be collapsed into a single generic recommendation. Each control maps to a different failure mode and a different evidence requirement.
+For OSINT demos, this document can be paired with CISA KEV, Volt Typhoon reporting, and sector-risk documents. It is useful for generating answers that separate what is known about an adversary from what an operator can do. Human review should trigger if the answer could be interpreted as live incident response instructions or if it involves public safety services.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, active conflict, elections, or cyber incident response.

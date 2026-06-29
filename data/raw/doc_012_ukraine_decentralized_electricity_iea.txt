@@ -1,0 +1,22 @@
+TITLE: Empowering Ukraine Through a Decentralised Electricity System
+SOURCE_ORG: International Energy Agency
+URL: https://www.iea.org/reports/empowering-ukraine-through-a-decentralised-electricity-system
+TOPIC_CATEGORY: Energy infrastructure disruption risks
+SUGGESTED_FILENAME: doc_012_ukraine_decentralized_electricity_iea.txt
+
+SUMMARY:
+This IEA report argues that distributed energy resources can help Ukraine address power deficits and reduce vulnerability to targeted attacks. It discusses solar PV, wind, batteries, small gas turbines, and other decentralized assets as part of resilience and recovery. The report notes that a large share of dispatchable capacity has been occupied, damaged, or destroyed since the full-scale invasion. It emphasizes that decentralization can make the power system more flexible and harder to disable through attacks on a few large nodes. It is useful because it provides a mitigation-focused counterpart to reports on infrastructure destruction. It also lets a RAG system compare centralized grid repair with distributed resilience strategies.
+
+WHY_USEFUL_FOR_RAG_OSINT_DEMO:
+Useful for retrieval of mitigation options and for generating recommendations that are grounded but still separate immediate risk from long-term recovery.
+
+USEFUL_PARAPHRASED_TEXT_FOR_INGESTION:
+This source focuses on mitigation rather than only damage. Its central claim is that Ukraine can improve energy resilience by deploying distributed energy resources. Distributed energy resources include solar photovoltaic systems, wind, batteries, small gas turbines, and local generation assets that can reduce dependence on large centralized power plants and long transmission routes. In a wartime environment, decentralization can reduce the payoff of attacks on a small number of major assets.
+
+A RAG assistant should treat this source as a resilience strategy document. It should not imply that distributed energy immediately eliminates Ukraine’s power deficit or makes attacks harmless. Instead, it should state that distributed resources can improve flexibility, local continuity, and recovery options. The effectiveness depends on deployment speed, financing, equipment availability, grid integration, protection, maintenance, and fuel supply for dispatchable units.
+
+This document is useful for answering “what can be done?” questions. It gives the system a way to move from situational reporting to grounded mitigation categories. For example, if the user asks how to reduce risk to hospitals or municipalities, the assistant can retrieve evidence on local generation, batteries, microgrids, and small turbines. If the user asks about national grid resilience, the assistant can explain that decentralization complements but does not replace transmission repair, grid balancing, and air defense.
+
+For contradiction testing, pair this source with the IEA winter report. The winter report emphasizes urgent vulnerabilities; this report emphasizes a path to improved resilience. These are not contradictions. They are different time horizons. The system should flag a human-review need if a generated answer over-promises distributed energy as a quick fix during an acute attack wave. It should also flag uncertainty around projected capacity gaps, because such estimates change with attacks, repairs, imports, and weather.
+
+RAG demo notes: This document should be chunked with metadata fields for title, organization, URL, topic category, publication type, and date if available. The retriever should prefer this document for evidence about its category but should not treat it as a single source of truth. Suggested extraction targets include named entities, geographic locations, affected sectors, risk drivers, mitigation actions, uncertainty markers, and claims that can be compared with other documents. A generated answer should include citations, confidence level, unknowns, possible contradictions, and a human-review flag when the source discusses public safety, defense, critical infrastructure, sanctions compliance, or active conflict.
