@@ -34,13 +34,14 @@ Implemented:
 - TF-IDF retrieval baseline;
 - OpenAI embedding generation;
 - dense semantic retrieval with cosine similarity;
+- hybrid retrieval with Reciprocal Rank Fusion;
+- query embedding cache for repeatable evaluation;
 - retrieval validation dataset;
 - retrieval metrics: Recall@1, Recall@3, Recall@5, MRR@5;
 - miss and low-rank diagnostics.
 
 Not implemented yet:
 
-- hybrid retrieval;
 - reranking;
 - LLM answer generation;
 - citation formatting;
@@ -134,7 +135,20 @@ This method is useful for:
 - queries where the wording differs from the document;
 - broader topic matching.
 
-Both retrievers return a similar result schema:
+### Hybrid Retrieval
+
+Hybrid retrieval combines sparse TF-IDF retrieval and dense embedding retrieval using Reciprocal Rank Fusion (RRF).
+
+The hybrid retriever:
+
+- retrieves a wider candidate pool from both TF-IDF and embedding retrieval;
+- fuses ranked results by `chunk_id`;
+- assigns an RRF score based on each candidate's rank in each retriever;
+- returns the same result schema as the other retrievers.
+
+This avoids directly adding TF-IDF scores and embedding cosine scores, which live on different scales.
+
+All retrievers return a similar result schema:
 
 ```json
 {
@@ -185,29 +199,38 @@ Evaluation set:
 - total cases: 170;
 - top-k: 5.
 
-TF-IDF baseline:
+| Retriever | Recall@1 | Recall@3 | Recall@5 | MRR@5 | Misses | Low-rank cases |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| TF-IDF | 0.759 | 0.918 | 0.947 | 0.837 | 9 | 32 |
+| Embedding | 0.729 | 0.947 | 0.959 | 0.829 | 7 | 39 |
+| Hybrid RRF tuned (`candidate_k=30`, `rrf_k=10`) | 0.782 | 0.959 | 0.971 | 0.867 | 5 | 32 |
+
+Hybrid RRF improves the headline ranking metrics over both standalone retrievers.
+
+The current evaluator also includes a small tuning loop over:
 
 ```text
-Recall@5: 0.947
-Recall@3: 0.918
-Recall@1: 0.759
-MRR@5:    0.837
+candidate_k = 10, 20, 30, 50
+rrf_k       = 10, 30, 60, 100
 ```
 
-Embedding retrieval:
+Best observed configuration in this grid:
 
 ```text
-Recall@5: 0.959
-Recall@3: 0.947
-Recall@1: 0.735
-MRR@5:    0.832
+candidate_k=30, rrf_k=10
+Recall@1: 0.782
+Recall@3: 0.959
+Recall@5: 0.971
+MRR@5:    0.867
+Misses:   5
+Low-rank: 32
 ```
 
 Interpretation:
 
-- embeddings improve semantic recall in top-5 and top-3;
-- TF-IDF is slightly stronger at ranking the exact expected document first;
-- the next step is hybrid retrieval, combining sparse and dense scores.
+- TF-IDF is strong for exact terms, source names, and policy/entity-specific queries;
+- embeddings improve semantic recall and reduce misses compared with sparse retrieval alone;
+- Hybrid RRF combines both signals and improves Recall@1, Recall@5, MRR@5, and miss count.
 
 This mirrors a common production RAG pattern: sparse retrieval catches exact terms, dense retrieval catches semantic meaning, and hybrid retrieval often improves robustness.
 
@@ -221,12 +244,14 @@ This mirrors a common production RAG pattern: sparse retrieval catches exact ter
 │       ├── chunks.jsonl            # processed chunk records
 │       └── chunk_embeddings.jsonl  # generated embedding records
 ├── eval/
-│   └── retrieval_eval.json         # retrieval validation dataset
+│   ├── retrieval_eval.json         # retrieval validation dataset
+│   └── query_embeddings.jsonl      # cached eval-query embeddings
 ├── src/
 │   ├── ingest.py                   # parsing, cleaning, chunking, metadata
 │   ├── retrieve.py                 # TF-IDF retrieval baseline
 │   ├── embed.py                    # OpenAI embedding generation
 │   ├── retrieve_embeddings.py      # dense retrieval over stored embeddings
+│   ├── retrieve_hybrid.py          # RRF hybrid retrieval
 │   └── evaluate_retrieval.py       # retrieval evaluation utilities
 ├── requirements.txt
 ├── sources.md
@@ -270,11 +295,13 @@ Generate processed chunks:
 python src/ingest.py
 ```
 
-Run TF-IDF retrieval evaluation:
+Run retrieval evaluation:
 
 ```bash
 PYTHONPATH=src python src/evaluate_retrieval.py
 ```
+
+This compares TF-IDF, embedding retrieval, and Hybrid RRF. It also prints the top hybrid tuning configurations.
 
 Generate embeddings:
 
@@ -295,6 +322,8 @@ Important design decisions:
 - JSONL is used as a simple inspectable storage format before introducing a vector database.
 - TF-IDF is kept as a baseline because production systems need measurable baselines.
 - Embeddings are stored separately from chunks to keep document text and vector artifacts decoupled.
+- Eval-query embeddings are cached in JSONL so repeated evaluation does not repeatedly call the embedding API.
+- Hybrid retrieval uses RRF first because sparse and dense scores are not directly comparable without normalization.
 - Retrieval outputs share a common schema to make evaluation reusable.
 - Evaluation is document-level rather than only chunk-level because user-facing RAG answers usually need source-level grounding.
 
@@ -303,7 +332,7 @@ Known limitations:
 - no vector database yet;
 - no approximate nearest neighbor index;
 - no batching for query embeddings;
-- no hybrid score normalization yet;
+- no learned or score-normalized hybrid retrieval yet;
 - no reranking layer;
 - no generation or citation layer yet.
 
@@ -311,16 +340,15 @@ Known limitations:
 
 Next planned steps:
 
-1. Add side-by-side evaluation for TF-IDF vs embedding retrieval.
-2. Implement hybrid retrieval with score normalization.
-3. Add reranking for top-k candidates.
-4. Build grounded answer generation using retrieved context only.
-5. Add citation extraction and answer-source mapping.
-6. Add confidence and unknowns.
-7. Add contradiction detection across retrieved sources.
-8. Add human-review triggers for sensitive topics.
-9. Design an agentic workflow for retrieval, answer drafting, verification, and fallback.
-10. Introduce LangGraph after the core workflow is understood from scratch.
+1. Add deeper miss analysis for hybrid retrieval failure cases.
+2. Add reranking for top-k candidates.
+3. Build grounded answer generation using retrieved context only.
+4. Add citation extraction and answer-source mapping.
+5. Add confidence and unknowns.
+6. Add contradiction detection across retrieved sources.
+7. Add human-review triggers for sensitive topics.
+8. Design an agentic workflow for retrieval, answer drafting, verification, and fallback.
+9. Introduce LangGraph after the core workflow is understood from scratch.
 
 ## Target Role Alignment
 
@@ -329,7 +357,8 @@ This project maps directly to LLM / RAG / Agentic AI engineering responsibilitie
 - Document processing: ingestion, parsing, cleaning, chunking, metadata.
 - RAG quality: sparse retrieval, dense retrieval, ranking diagnostics.
 - Embeddings: OpenAI embedding generation, vector similarity, semantic search.
-- Evaluation: validation dataset, Recall@k, MRR, miss analysis.
+- Hybrid retrieval: RRF fusion, candidate-pool tuning, sparse/dense comparison.
+- Evaluation: validation dataset, Recall@k, MRR, miss analysis, low-rank diagnostics.
 - Grounding foundation: chunk metadata, document IDs, source URLs, result contracts.
 - Agentic roadmap: future retrieval-augmented workflow with verification and human-review routing.
 

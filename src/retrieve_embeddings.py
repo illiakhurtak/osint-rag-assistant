@@ -3,6 +3,7 @@ from openai import OpenAI
 import os
 from sklearn.metrics.pairwise import cosine_similarity
 from dotenv import load_dotenv
+from pathlib import Path
 
 load_dotenv()
 
@@ -28,6 +29,37 @@ def build_embedding_lookup(embedding_records):
         embeddings[elem['chunk_id']] = elem['embedding']
     return embeddings
 
+def load_query_embedding_cache(path):
+    if not Path(path).exists():
+        return {}
+    data = load_jsonl(path)
+    cache = dict()
+    for elem in data:
+        cache[(elem['query'], elem['model'])] = elem['embedding']
+    return cache
+
+def append_query_embedding(path, query, model, embedding):
+    Path(path).parent.mkdir(parents=True, exist_ok=True)
+
+    record = {
+        'query': query,
+        'model': model,
+        'embedding': embedding,
+    }
+
+    with open(path, 'a', encoding='utf-8') as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+def get_or_create_query_embedding(query, model, cache, cache_path):
+    if (query, model) in cache:
+        return cache[(query, model)]
+
+    query_embedding = embed_query(query, model)
+    append_query_embedding(cache_path, query, model, query_embedding)
+    cache[(query, model)] = query_embedding
+    return query_embedding
+
+
 def build_embedding_index(chunks, embedding_records):
     lookup = build_embedding_lookup(embedding_records)
     candidate_chunks=[]
@@ -48,9 +80,8 @@ def embed_query(query, model):
     response = client.embeddings.create(input=[query], model=model)
     return response.data[0].embedding
 
-def search_embeddings(query, candidate_chunks, candidate_vectors, model, top_k=5):
-    embedded_query = embed_query(query, model)
-    scores = cosine_similarity([embedded_query], candidate_vectors)[0]
+def search_by_embedding(query_embedding, candidate_chunks, candidate_vectors, top_k=5):
+    scores = cosine_similarity([query_embedding], candidate_vectors)[0]
     top_indices = scores.argsort()[::-1][:top_k]
 
     results = []
@@ -67,6 +98,8 @@ def search_embeddings(query, candidate_chunks, candidate_vectors, model, top_k=5
             "topic_category": chunk["topic_category"],
             "text": chunk["text"]
         })
-
-
     return results
+
+def search_embeddings(query, candidate_chunks, candidate_vectors, model, top_k=5):
+    embed = embed_query(query, model)
+    return search_by_embedding(embed, candidate_chunks, candidate_vectors, top_k)
