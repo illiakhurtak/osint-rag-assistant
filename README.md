@@ -2,9 +2,9 @@
 
 Production Retrieval-Augmented Generation project for OSINT and geopolitical analysis.
 
-This repository is my educational but engineering-focused implementation of a RAG system built from scratch. The goal is to  implement the core components behind a LLM assistant: document ingestion, parsing, chunking, metadata, sparse retrieval, dense retrieval, evaluation, and the next steps toward grounded answer generation and agentic workflows.
+This repository is my educational but engineering-focused implementation of a RAG system built from scratch. The goal is to implement the core components behind a LLM assistant: document ingestion, parsing, chunking, metadata, sparse retrieval, dense retrieval, hybrid retrieval, evaluation, and grounded answer generation.
 
-The current version is focused on the retrieval and evaluation layer: turning curated OSINT-style documents into searchable chunks, comparing TF-IDF retrieval against OpenAI embedding retrieval, and measuring quality with a validation dataset.
+The current version turns curated OSINT-style documents into searchable chunks, compares TF-IDF retrieval against OpenAI embedding retrieval, combines them with Hybrid RRF, evaluates retrieval quality with a validation dataset, and runs a first grounded answer-generation flow over retrieved context.
 
 ## Project Goal
 
@@ -19,7 +19,7 @@ The long-term goal is to build an OSINT RAG assistant that can answer questions 
 - influence operations and disinformation;
 - OSINT methodology.
 
-Answers should eventually be grounded in retrieved documents and include citations, confidence, unknowns, contradictions, and human-review signals.
+Answers are being designed to stay grounded in retrieved documents and include citations, confidence, unknowns, contradictions, and human-review signals.
 
 ## Current Status
 
@@ -36,6 +36,8 @@ Implemented:
 - dense semantic retrieval with cosine similarity;
 - hybrid retrieval with Reciprocal Rank Fusion;
 - query embedding cache for repeatable evaluation;
+- context builder for prompt-ready grounded sources;
+- first grounded answer generation layer with citations, unknowns, confidence, and human-review fields;
 - retrieval validation dataset;
 - retrieval metrics: Recall@1, Recall@3, Recall@5, MRR@5;
 - miss and low-rank diagnostics.
@@ -43,11 +45,7 @@ Implemented:
 Not implemented yet:
 
 - reranking;
-- LLM answer generation;
-- citation formatting;
-- confidence estimation;
 - contradiction detection;
-- human-review routing;
 - agentic workflow / tool use.
 
 ## Why This Project Matters
@@ -234,6 +232,67 @@ Interpretation:
 
 This mirrors a common production RAG pattern: sparse retrieval catches exact terms, dense retrieval catches semantic meaning, and hybrid retrieval often improves robustness.
 
+## Grounded Generation
+
+The project now includes a first end-to-end RAG answer path:
+
+```text
+user query
+    |
+    v
+Hybrid RRF retrieval
+    |
+    v
+context builder
+    |
+    v
+grounded LLM answer
+```
+
+The context builder formats retrieved chunks into numbered source blocks:
+
+```text
+[1]
+Title: ...
+Source: ...
+URL: ...
+Doc ID: ...
+Chunk ID: ...
+Text:
+...
+```
+
+The generation prompt instructs the model to:
+
+- use only the provided context;
+- avoid outside knowledge and speculation;
+- cite factual claims with source numbers such as `[1]`, `[2]`;
+- state unknowns when evidence is insufficient;
+- return confidence;
+- flag human review for active conflict, sanctions, cyber threats, critical infrastructure, defense procurement, named-entity allegations, or forecasting claims.
+
+Current answer structure:
+
+```text
+Answer:
+...
+
+Citations:
+- [1] ...
+
+Unknowns:
+- ...
+
+Confidence:
+Low / Medium / High
+
+Human Review:
+Yes / No
+
+Human Review Reason:
+...
+```
+
 ## Repository Structure
 
 ```text
@@ -252,6 +311,8 @@ This mirrors a common production RAG pattern: sparse retrieval catches exact ter
 │   ├── embed.py                    # OpenAI embedding generation
 │   ├── retrieve_embeddings.py      # dense retrieval over stored embeddings
 │   ├── retrieve_hybrid.py          # RRF hybrid retrieval
+│   ├── context_builder.py          # prompt-ready context formatting
+│   ├── generate_answer.py          # grounded answer generation demo
 │   └── evaluate_retrieval.py       # retrieval evaluation utilities
 ├── requirements.txt
 ├── sources.md
@@ -303,6 +364,14 @@ PYTHONPATH=src python src/evaluate_retrieval.py
 
 This compares TF-IDF, embedding retrieval, and Hybrid RRF. It also prints the top hybrid tuning configurations.
 
+Run grounded answer generation:
+
+```bash
+PYTHONPATH=src python src/generate_answer.py
+```
+
+This retrieves context with tuned Hybrid RRF, formats source blocks, and asks the LLM to answer with citations, unknowns, confidence, and human-review status.
+
 Generate embeddings:
 
 ```bash
@@ -325,6 +394,7 @@ Important design decisions:
 - Eval-query embeddings are cached in JSONL so repeated evaluation does not repeatedly call the embedding API.
 - Hybrid retrieval uses RRF first because sparse and dense scores are not directly comparable without normalization.
 - Retrieval outputs share a common schema to make evaluation reusable.
+- Context formatting is separated from generation so citation numbering and metadata are deterministic.
 - Evaluation is document-level rather than only chunk-level because user-facing RAG answers usually need source-level grounding.
 
 Known limitations:
@@ -334,7 +404,7 @@ Known limitations:
 - no batching for query embeddings;
 - no learned or score-normalized hybrid retrieval yet;
 - no reranking layer;
-- no generation or citation layer yet.
+- no automated answer-quality evaluation yet.
 
 ## Roadmap
 
@@ -342,13 +412,12 @@ Next planned steps:
 
 1. Add deeper miss analysis for hybrid retrieval failure cases.
 2. Add reranking for top-k candidates.
-3. Build grounded answer generation using retrieved context only.
+3. Add answer-format validation for citations, unknowns, confidence, and human-review fields.
 4. Add citation extraction and answer-source mapping.
-5. Add confidence and unknowns.
-6. Add contradiction detection across retrieved sources.
-7. Add human-review triggers for sensitive topics.
-8. Design an agentic workflow for retrieval, answer drafting, verification, and fallback.
-9. Introduce LangGraph after the core workflow is understood from scratch.
+5. Add contradiction detection across retrieved sources.
+6. Add human-review policy tests for sensitive topics.
+7. Design an agentic workflow for retrieval, answer drafting, verification, and fallback.
+8. Introduce LangGraph after the core workflow is understood from scratch.
 
 ## Target Role Alignment
 
@@ -359,7 +428,8 @@ This project maps directly to LLM / RAG / Agentic AI engineering responsibilitie
 - Embeddings: OpenAI embedding generation, vector similarity, semantic search.
 - Hybrid retrieval: RRF fusion, candidate-pool tuning, sparse/dense comparison.
 - Evaluation: validation dataset, Recall@k, MRR, miss analysis, low-rank diagnostics.
-- Grounding foundation: chunk metadata, document IDs, source URLs, result contracts.
+- Grounding foundation: chunk metadata, document IDs, source URLs, result contracts, citation-ready context.
+- Generation layer: grounded answer prompt with citations, unknowns, confidence, and human-review status.
 - Agentic roadmap: future retrieval-augmented workflow with verification and human-review routing.
 
 The project is intentionally built in stages so each component can be understood, tested, and improved independently.
